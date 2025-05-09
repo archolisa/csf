@@ -14,10 +14,10 @@ export const Footer = () => {
           <h3 className="text-base lg:text-lg tracking-wider">CONNECT.</h3>
           <p className="text-base lg:text-lg tracking-wider">OUR SOCIALS.</p>
           <div className="flex gap-4 text-2xl">
-            <Link href="https://discord.gg/XPA6JaScYZ" target="_blank">
+            <Link href="https://facebook.com" target="_blank">
               <DiscordSVG />
             </Link>
-            <Link href="https://www.instagram.com/acm_iit" target="_blank">
+            <Link href="https://www.instagram.com/candsfoundation" target="_blank">
               <InstagramSVG />
             </Link>
           </div>
@@ -25,12 +25,12 @@ export const Footer = () => {
 
         {/* Right Section - Mailing List */}
         <div className="flex flex-col items-center md:items-end gap-4">
-          <h3 className="text-base lg:text-lg tracking-wider">JOIN OUR MAILING LIST.</h3>
+          <h3 className="text-base lg:text-lg tracking-wider">SUPPORT OUR CAUSE</h3>
           <Button
             variant="outline"
             className="border-accent-color-primary text-accent-color-primary hover:bg-accent-color-primary hover:text-background px-6 py-2"
           >
-            join now
+            donate
           </Button>
         </div>
       </div>
@@ -38,9 +38,9 @@ export const Footer = () => {
       {/* Email Row */}
       <div className="p-8 lg:py-12 lg:px-24 max-w-6xl mx-auto flex flex-col md:flex-row justify-between text-center md:text-left">
         <div className="flex flex-col items-center lg:items-start text-center gap-2">
-            <h3 className="text-base lg:text-lg text-center flex gap-2 items-center"><EmailSVG /> EMAIL.</h3>
+            <h3 className="text-base lg:text-lg text-center flex gap-2 items-center"><EmailSVG /> Send us an Email</h3>
             <div>
-              <p className="text-sm"><Link href="mailto:acm@iit.edu">acm@iit.edu</Link></p>
+              <p className="text-sm"><Link href="mailto:cyrilandsusannafoundation@gmail.com">info@cyrilandsusannafoundation.com</Link></p>
             </div>
           </div>
       </div>
@@ -48,13 +48,13 @@ export const Footer = () => {
       {/* Bottom Section - Logo and Copyright */}
       <div className="flex flex-col mx-auto items-center mt-10">
         <Image
-          src="/assets/acm_iit_logo.png"
-          alt="ACM IIT Logo"
+          src="/assets/cyril-susanna-logo.png"
+          alt="C&S Foundation Logo"
           width={36}
           height={36}
         />
         <p className="text-xs text-gray-400 my-4 text-center">
-          Made with ❤ from<br /> the Web Design Team at IIT.
+          Made with ❤ by <br /> Olisa Digital Solutions.
         </p>
       </div>
     </footer>

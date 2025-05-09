@@ -1,7 +1,7 @@
 import React from "react";
 import { NavigationBar } from "@/components/ui/navigation-bar";
 import { CarouselPlugin } from "@/components/ui/home-carousel";
-import { Gallery } from "@/components/gallery";
+import { Feedback } from "@/components/testimonials/feedback";
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
@@ -23,48 +23,61 @@ const Home = () => {
         <div className="w-full lg:w-1/3 lg:flex-1">
           <h3 className="text-2xl lg:text-3xl 2xl:text-4xl">
             Welcome to{" "}
-            <span className="text-accent-color-primary">ACM IIT.</span>
+            <span className="text-accent-color-primary">CYRIL AND SUSANNA FOUNDATION.</span>
           </h3>
           <p className="font-raleway text-sm mt-2 lg:text-md xl:text-lg">
-            A vibrant community of tech enthusiasts through dyanmic events,
-            engaging competitions, insightful seminars, and exciting
-            opportunities to learn, grow and innovate.
+            Scholarships and support for brilliant, deserving students from Isuofia and beyond. Together, we&apos;re shaping tomorrow&apos;s leaders-today!
           </p>
         </div>
         <div className="flex-0 w-full lg:w-1/2 justify-end">
           <h1 className="text-4xl lg:text-6xl leading-[1] lg:text-right">
-            The Largest Computer Community in <br />
-            <span className="text-accent-color-primary">Illinois Tech.</span>
+            Helping the less Privileged. <br />
+            <span className="text-accent-color-primary">Lighting the Path to a Brighter Future..</span>
           </h1>
         </div>
       </header>
 
       <main className="flex-1 flex flex-col items-center">
-        {/* Events Section */}
+        {/* About Us */}
         <section className="flex flex-col items-center lg:flex-row lg:items-start justify-between lg:h-[500px] p-8 lg:p-24 gap-4">
+          <div className="w-full flex flex-col items-center mt-4 lg:w-1/2 lg:mt-0 lg:h-full">
+            <h2 className="text-lg 2xl:text-2xl text-center text-accent-color-primary">
+              ABOUT US
+            </h2>
+            <p className="font-raleway text-sm 2xl:text-xl mt-2 flex-1">
+            The Cyril and Susanna Foundation is a non-profit organization committed to fostering human capital development in Nigeria, with a special focus on the Isuofia community in Aguata Local Government Area of Anambra State. <br/> Founded by <strong>Dr. Ike Nwankwor, MD, FRCPC</strong>, an accomplished son of Isuofia in Aguata LGA. Anambra State. This Foundation seeks to create opportunities for education and personal growth among the youth, particularly those from underprivileged backgrounds.
+Since its inception, the Foundation has launched several scholarship schemes aimed at supporting students across different educational levels—from primary school to university. <br/> Our initiatives include university scholarships for brilliant but disadvantaged Isuofia indigenes, educational support for members of the founder’s extended family, and merit-based scholarships for top-performing primary school pupils progressing to secondary school.
+<br/>We currently support over a dozen students and aim to expand our reach annually. The Foundation also envisions future postgraduate sponsorships and is actively working towards establishing a trust fund to ensure the sustainability of its programs.
+Driven by a passion to uplift the next generation, the Cyril and Susanna Foundation believes in empowering young minds through education—nurturing talent, inspiring excellence, and transforming lives.
+            </p>
+          </div>
+
           <Image
             className="rounded-md"
-            alt="ACM IIT Picture"
-            src={`/assets/acm_pictures/1.jpeg`}
+            alt="C&S Foundation Picture"
+            src={`/assets/cs_pictures/1.jpeg`}
             width={450}
             height={450}
           />
+        </section>
+        
+        {/* Carousel Section */}
+        <section className="flex flex-col items-center lg:flex-row lg:items-start justify-between lg:h-[500px] p-8 lg:p-24 gap-4">
+        <div className="w-full flex flex-col items-center mt-4 lg:w-1/2 lg:mt-0 lg:h-full">
+            <CarouselPlugin />
+          </div>
+          
 
           <div className="w-full flex flex-col items-center mt-4 lg:w-1/2 lg:mt-0 lg:h-full">
             <h2 className="text-lg 2xl:text-2xl text-center text-accent-color-primary">
-              OUR EVENTS
+              GALLERY
             </h2>
             <p className="font-raleway text-sm 2xl:text-2xl mt-2 flex-1">
-              Stay ahead in the world of computing with ACM IIT&apos;s exciting
-              events! From hands-on workshops and insightful tech talks to
-              networking sessions and hackathons, we provide opportunities for
-              students to learn, innovate, and connect with industry leaders.
-              Don&apos;t miss out on these chances to grow and excel in your
-              computing journey.
+            Discover the faces behind our mission — from dedicated sponsors and visionary board members to the inspiring scholars whose lives have been touched by the Cyril & Susanna Foundation. Browse through moments captured at our scholarship awards, community outreach, and other impactful events that shape our story.
             </p>
-            <Link href="/events">
+            <Link href="/programmes">
               <Button variant="default" className="mt-4 2xl:text-lg 2xl:py-4">
-                ACM IIT EVENTS
+                VIEW OUR PROGRAMMES
                 <svg
                   width="36"
                   height="20"
@@ -85,42 +98,21 @@ const Home = () => {
           </div>
         </section>
 
-        {/* About Us */}
-        <section className="flex flex-col items-center lg:flex-row lg:items-start justify-between lg:h-[500px] p-8 lg:p-24 gap-4">
-          <div className="w-full flex flex-col items-center mt-4 lg:w-1/2 lg:mt-0 lg:h-full">
-            <h2 className="text-lg 2xl:text-2xl text-center text-accent-color-primary">
-              ABOUT US
-            </h2>
-            <p className="font-raleway text-sm 2xl:text-xl mt-2 flex-1">
-              ACM IIT is the premier student chapter dedicated to advancing
-              computing knowledge, fostering innovation, and building a thriving
-              community of tech enthusiasts at Illinois Institute of Technology.
-              We strive to inspire, educate, and connect students through
-              workshops, events, and collaborative opportunities, empowering
-              them to excel in the ever-evolving world of technology.
-            </p>
-          </div>
-
-          <div className="w-full flex flex-col items-center mt-4 lg:w-1/2 lg:mt-0 lg:h-full">
-            <CarouselPlugin />
-          </div>
-        </section>
 
         {/* Gallery Section */}
         <section className="mt-8 w-full relative flex flex-col items-center lg:flex-row lg:items-start justify-between lg:h-auto p-8 lg:p-24 gap-4">
           <Image
             className="absolute top-[10px] left-1/2 tranform -translate-x-1/2 max-w-full"
-            src={`/assets/acm_pictures/little_stars.png`}
+            src={`/assets/cs_pictures/little_stars.png`}
             height={195}
             width={1000}
-            alt="ACM's Little Stars"
+            alt="Little Stars"
           />
           <div className="w-full flex flex-col items-center mt-4 lg:mt-0 lg:h-full">
             <h2 className="text-2xl 2xl:text-3xl text-center">
-              Building Connections, Inspiring Collaborations and Growing
-              Together
+              Hear from some of our current Beneficiaries
             </h2>
-            <Gallery />
+            <Feedback/>
           </div>
         </section>
 

@@ -1,4 +1,4 @@
-# ACM Illinois Tech Website Repository
+# Cyril and Susanna FoundationWebsite Repository
 
 ## Getting Started
 
@@ -17,13 +17,13 @@ Make sure you have the following installed on your machine:
 2. Clone the repository using the following command:
 
 ```sh
-git clone https://github.com/iitacm1/iitacm1.github.io.git
+git clone https://github.com/archolisa/cyril.git
 ```
 
 3.  Navigate to the project directory:
 
 ```sh
-cd iitacm1.github.io
+cd cyril
 ```
 
 ### Installing Dependencies

@@ -3,7 +3,7 @@ import { neon } from "@neondatabase/serverless";
 
 export async function GET() {
   try {
-    const sql = neon(process.env.ACM_IIT_POSTGRES_DATABASE_URL!);
+    const sql = neon(process.env.CSF_POSTGRES_DATABASE_URL!);
     const data = await sql`SELECT
       b.id,
       b.name,

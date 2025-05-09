@@ -15,12 +15,11 @@ export const NavigationBar = () => {
   const links = [
     { href: "/", label: "Home" },
     { href: "/team", label: "Team" },
-    { href: "/events", label: "Events" },
-    { href: "/merch", label: "Merch" },
-    { href: "/contact", label: "Contact" },
-    { href: "https://www.scarlethacks.com", label: "ScarletHacks", target: "_blank" },
-    { href: "/sigs", label: "SIGs" },
-    { href: "/get-involved", label: "Get Involved" },
+    { href: "/our-sponsor", label: "Our Sponsor" },
+    { href: "/programmes", label: "Programmes" },
+    { href: "/beneficiaries", label: "Beneficiaries" },
+    { href: "/contact", label: "Contact Us" },
+    { href: "/scholarships", label: "Scholarships" },
   ];
 
   // Listen for scroll events to toggle navbar height
@@ -43,7 +42,7 @@ export const NavigationBar = () => {
       <div className="flex justify-between items-center w-full">
         <div className="flex items-center space-x-4">
           <Link href="/">
-            <Image src="/assets/acm_iit_logo.png" className="transition-all duration-300" alt="Logo" width={isScrolled ? 60 : 70} height={isScrolled ? 70 : 80} />
+            <Image src="/assets/cyril-susanna-logo.png" className="transition-all duration-300" alt="Logo" width={isScrolled ? 60 : 96} height={isScrolled ? 70 : 96} />
           </Link>
         </div>
         {/* Menu Items on Large Screen */}
@@ -52,7 +51,7 @@ export const NavigationBar = () => {
             <a
               key={link.href}
               href={link.href}
-              target={link.hasOwnProperty("target") ? link.target : "_self"}
+              // target={link.hasOwnProperty("target") ? link.target : "_self"}
               className={clsx(
                 "pb-px border-b border-transparent",
                 { "text-accent-color-primary active-link": pathname === link.href }
@@ -91,7 +90,7 @@ export const NavigationBar = () => {
                 <a
                   key={link.href}
                   href={link.href}
-                  target={link.hasOwnProperty("target") ? link.target : "_self"}
+                  // target={link.hasOwnProperty("target") ? link.target : "_self"}
                   onClick={() => setIsMobileMenuOpen(false)}
                   className={clsx(
                     "text-xl font-medium transition-colors duration-200",

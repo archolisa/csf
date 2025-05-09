@@ -12,7 +12,7 @@ export const StayInTouch = () => {
       <div className="w-full flex flex-col items-center space-y-8">
         {/* Discord */}
         <Link
-          href="https://discord.gg/XPA6JaScYZ"  // Replace with your Discord URL
+          href="https://discord.gg/"  // Replace with your Discord URL
           target="_blank"
           rel="noopener noreferrer"
           className="cursor-pointer w-1/2 flex items-center justify-between hover:scale-105 transition-transform"
@@ -63,14 +63,14 @@ export const StayInTouch = () => {
                 strokeLinejoin="round"
               />
             </svg>
-            <span className="font-bold">DISCORD</span>
+            <span className="font-bold">FACEBOOK</span>
           </div>
           <ArrowRightSVG className="w-5 h-5 text-red-600" />
         </Link>
 
         {/* Instagram */}
         <Link
-          href="https://www.instagram.com/acm_iit"
+          href="https://www.instagram.com/"
           target="_blank"
           rel="noopener noreferrer"
           className="cursor-pointer w-1/2 flex items-center justify-between hover:scale-105 transition-transform"
@@ -112,7 +112,7 @@ export const StayInTouch = () => {
 
         {/* Email */}
         <Link
-          href="mailto:acm@iit.edu"
+          href="mailto:info@cyrilandsusannafoundation.org"
           className="cursor-pointer w-1/2 flex items-center justify-between hover:scale-105 transition-transform"
         >
           <div className="flex items-center space-x-2">

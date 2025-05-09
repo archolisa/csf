@@ -17,14 +17,14 @@ export const ContactFooter = () => {
       <div className="mt-[300px] p-8 gap-8 lg:px-24 lg:py-16 max-w-6xl mx-auto flex flex-col md:flex-row justify-between text-center md:text-left lg:gap-4">
         <div className="flex flex-col mx-auto items-center mt-10">
           <Image
-            src="/assets/acm_iit_logo.png"
-            alt="ACM IIT Logo"
+            src="/assets/cyril-susanna-logo.png"
+            alt=" Logo"
             width={36}
             height={36}
           />
           <p className="text-xs text-gray-400 my-4 text-center">
-            Made with ❤ from
-            <br /> the Web Design Team at IIT.
+            Made with ❤ by
+            <br /> Olisa Digital Solutions
           </p>
         </div>
       </div>

@@ -9,32 +9,32 @@ const upcomingEvents: Event[] = []
 
 const pastEvents: Event[] = [
   {
-    name: "Scarlet Hacks 2025 – Innovate, Build, Compete",
-    description: "a student-led hackathon designed to bring together problem solvers, developers, and innovators.",
+    name: "SScholarship award day",
+    description: "a day designated to the issuance of scholarship award to successful applicants.",
     date: "2025-04-05 08:00",
     endDate: "2025-04-06 14:30",
-    location: "Stuart Building, Chicago, IL",
+    location: "Ozalla, Isuofia",
     place: "SB 107",
     timezone: "America/Chicago",
-    link: "https://www.linkedin.com/posts/acm-iit_scarlethacks-hackathon-innovation-activity-7310521446995214336-IFXH?utm_source=share&utm_medium=member_desktop&rcm=ACoAACEEUYEBfR38tezSmfZ_VCQFeUnQkTa7YhY"
+    link: "https://www.linkedin.com/posts/"
   },
   {
-    name: "ICPC Event - Crack the Code - 2",
-    description: "Following our successful Introduction to Cracking Coding Problems session, we are excited to bring you Part 2 of our ICPC Coding Workshop, featuring Professor Michael Lee. In this session, we\’ll dive deeper into competitive programming techniques, covering essential problem-solving strategies, algorithmic thinking, and hands-on coding challenges.",
+    name: "Get Together",
+    description: "A day designated to meet and eat and have fun.",
     date: "2025-02-27 12:45",
     endDate: "2025-02-27 14:00",
-    location: "Stuart Building, Chicago, IL",
+    location: "Ozalla, Isuofia",
     place: "SB 111",
     timezone: "America/Chicago",
-    link: "https://www.linkedin.com/posts/acm-iit_competitiveprogramming-icpc-codingchallenges-activity-7299986111169187841-Zjrp?utm_source=share&utm_medium=member_desktop&rcm=ACoAACEEUYEBfR38tezSmfZ_VCQFeUnQkTa7YhY"
+    link: "https://www.linkedin.com/"
   },
   {
-    name: "Career Elevation Workshop",
+    name: "Annual Meeting",
     date: "2025-02-08 11:30",
     description: "Polish your Resume and Elevator Pitch with insights from industry experts to boost your career.",
     endDate: "2025-02-08 16:00",
     location: "Online",
-    place: "Kaplan Tellabs",
+    place: "Online",
     timezone: "America/Chicago",
     link: null
   }
@@ -66,7 +66,7 @@ export function EventsTabs() {
             </div>
             <AddToCalendar {...event} />
           </div>
-        )) : <div className="flex items-center justify-center p-6 h-24"><h3 className="text-lg">Stay tuned... We&apos;re cooking.</h3></div>}
+        )) : <div className="flex items-center justify-center p-6 h-24"><h3 className="text-lg">Stay tuned... We&apos;re working on it.</h3></div>}
       </TabsContent>
 
       <TabsContent value="past" className="space-y-4">

@@ -12,9 +12,9 @@ import Image from "next/image";
 
 export function CarouselPlugin() {
   const images = [
-    '/assets/acm_pictures/2.png',
-    '/assets/acm_pictures/1.jpeg',
-    '/assets/acm_pictures/3.png'
+    '/assets/cs_pictures/2.png',
+    '/assets/cs_pictures/1.jpeg',
+    '/assets/cs_pictures/3.png'
   ];
 
   return (
@@ -31,7 +31,7 @@ export function CarouselPlugin() {
           <CarouselItem key={index}>
             <div className="p-1">
                 <div className="flex  items-center justify-center">
-                    <Image className="rounded-md" alt="ACM IIT Picture" src={image} width={450} height={450} />
+                    <Image className="rounded-md" alt="C&SF Picture" src={image} width={450} height={450} />
                 </div>
             </div>
           </CarouselItem>

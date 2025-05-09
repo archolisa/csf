@@ -4,50 +4,47 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "ACM Illinois Tech",
+  title: "Cyril & Susanna Foundation",
   icons: [
     {
       rel: "icon",
-      url: "https://raw.githubusercontent.com/iitacm/iitacm1.github.io/refs/heads/main/app/favicon.ico",
+      url: "https://img.icons8.com/?size=100&id=39020&format=png&color=000000",
     },
   ],
   description:
-    "The Official Website of Associate of Computing Machinery at Illinois Tech",
+    "The Official Website of Cyril and Susanna Foundation",
   keywords: [
-    "ACM",
-    "IIT",
-    "Illinois Tech",
-    "Associate of Computing Machinery",
-    "Illinois Institute of Technology",
-    "ACM IIT",
-    "ACM Illinois Tech",
-    "ACM IIT Website",
-    "ACM Illinois Tech Website",
+    "Cyril and Susanna Foundation",
+    "C&S Foundation",
+    "C&S",
+    "Cyril and Susanna Foundation Isuofia",
+    "Scholarship Anambra",
+    "Scholarship Isuofia",
   ],
-  authors: [{ name: "ACM Illinois Tech", url: "https://acmilliniostech.org" }],
-  openGraph: {
-    title: "ACM Illinois Tech",
-    description:
-      "The Official Website of Associate of Computing Machinery at Illinois Tech",
-    url: "https://acmillinoistech.org",
-    siteName: "ACM Illinois Tech",
-    images: [
-      {
-        url: "../public/assets/acm_iit_logo.png",
-        width: 800,
-        height: 600,
-      },
-    ],
-    locale: "en_US",
-    type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "ACM Illinois Tech",
-    description:
-      "The official Website of Associate of Computing Machinery at Illinois Tech",
-    images: ["../public/assets/acm_iit_logo.png"],
-  },
+  // authors: [{ name: "Cyril and Susanna Foundation", url: "https://cyrilandsusannafoundation.org" }],
+  // openGraph: {
+  //   title: "Cyril and Susanna Foundation",
+  //   description:
+  //     "The Official Website of Cyril and Susanna Foundation",
+  //   url: "https://cyrilandsusannafoundation.org/",
+  //   siteName: "Cyril and Susanna Foundation",
+  //   images: [
+  //     {
+  //       url: "../public/assets/cyril-susanna-logo.png",
+  //       width: 800,
+  //       height: 600,
+  //     },
+  //   ],
+  //   locale: "en_US",
+  //   type: "website",
+  // },
+  // twitter: {
+  //   card: "summary_large_image",
+  //   title: "Cyril and Susanna Foundation",
+  //   description:
+  //     "The Official Website of Cyril and Susanna Foundation",
+  //   images: ["../public/assets/cs_logo.png"],
+  // },
   robots: {
     index: false,
     follow: true,

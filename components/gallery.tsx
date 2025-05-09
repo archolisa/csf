@@ -5,16 +5,16 @@ import Image from "next/image";
 
 export const Gallery = () => {
     const images = [
-        '/assets/acm_pictures/12.png',
-        '/assets/acm_pictures/10.png',
-        '/assets/acm_pictures/16.png',
-        '/assets/acm_pictures/8.png',
-        '/assets/acm_pictures/7.png',
-        '/assets/acm_pictures/5.png',
-        '/assets/acm_pictures/17.png',
-        '/assets/acm_pictures/6.png',
-        '/assets/acm_pictures/14.png',
-        '/assets/acm_pictures/19.png',
+        '/assets/cs_pictures/2.png',
+        // '/assets/cs_pictures/10.png',
+        // '/assets/cs_pictures/16.png',
+        // '/assets/cs_pictures/8.png',
+        // '/assets/cs_pictures/7.png',
+        // '/assets/cs_pictures/5.png',
+        // '/assets/cs_pictures/17.png',
+        // '/assets/cs_pictures/6.png',
+        // '/assets/cs_pictures/14.png',
+        // '/assets/cs_pictures/19.png',
     ];
 
     const ref = useRef(null);

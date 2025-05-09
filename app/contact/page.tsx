@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { TbBrandDiscord, TbBrandLinkedin  } from "react-icons/tb";
+import { TbBrandFacebook, TbPhone } from "react-icons/tb";
 import { IoLogoInstagram } from "react-icons/io5";
 import { Mail } from "lucide-react";
 
@@ -14,11 +14,11 @@ const Page = () => {
           {/* Left Section */}
           <div className="lg:w-1/2 flex flex-col items-start justify-center h-100 space-around gap-10">
             <div>
-              <h2 className="text-5xl lg:text-6xl mb-4">Contact ACM IIT.</h2>
-              <h2 className="text-5xl lg:text-6xl mb-4">Anytime.</h2>
+              <h2 className="text-5xl lg:text-6xl mb-4">Contact Us.</h2>
+              <h2 className="text-5xl lg:text-6xl mb-4">Anytime!</h2>
             </div>
             <p className="text-lg">
-              Reach Out to the ACM Board—We&apos;re Here to Help!
+              Reach Out to Cyril & Susanna Foundation—We&apos;re always available!
             </p>
           </div>
 
@@ -28,46 +28,47 @@ const Page = () => {
               <ul>
                 <li className="mb-12">
                   <Link
-                    href="mailto:acm@iit.edu"
+                    href="mailto:info@cyrilandsusannafoundation.com"
                     target="_blank"
                     className="flex items-center rounded-md p-3 bg-background"
                   >
                     <Mail className="w-7 h-7 mr-2" />
-                    <span className="text-gray-800">acm@iit.edu</span>
+                    <span className="text-gray-800">info@cyrilandsusannafoundation.org</span>
                   </Link>
                 </li>
                 <li className="mb-12">
                   <Link
-                    href="https://linkedin.com/company/acm-iit"
+                    href="https://facebook.com"
                     target="_blank"
                     className="flex items-center rounded-md p-3 bg-background"
                   >
-                    <TbBrandLinkedin className="w-7 h-7 mr-2" />
+                    <TbBrandFacebook className="w-7 h-7 mr-2" />
                     <span className="text-gray-800">
-                      linkedin.com/company/acm-iit
+                      facebook.com/cyrilandsusannafoundation
                     </span>
                   </Link>
                 </li>
                 <li className="mb-12">
                   <Link
-                    href="https://discord.gg/yUjWpA48"
-                    target="_blank"
-                    className="flex items-center rounded-md p-3 bg-background"
-                  >
-                    <TbBrandDiscord className="w-7 h-7 mr-2" />
-                    <span className="text-gray-800">
-                      https://discord.gg/yUjWpA48
-                    </span>
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="https://instagram.com/acm_iit"
+                    href="https://instagram.com/candsfoundation"
                     target="_blank"
                     className="flex items-center rounded-md p-3 bg-background"
                   >
                     <IoLogoInstagram className="w-7 h-7 mr-2" />
-                    <span className="text-gray-800">https://instagram.com/acm_iit</span>
+                    <span className="text-gray-800">https://instagram.com/csfoundation</span>
+                    
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                  href=""
+                  target="_blank"
+                  className="flex items-center rounded-md p-3 bg-background"
+                >
+                  <TbPhone className="w-7 h-7 mr-2" />
+                  <span className="text-gray-800">
+                    +2348037651703
+                  </span>
                   </Link>
                 </li>
               </ul>
