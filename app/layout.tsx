@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   icons: [
     {
       rel: "icon",
-      url: "https://i.ibb.co/DfryXrK4/acm-iit-logo.png",
+      url: "https://img.icons8.com/?size=100&id=39020&format=png&color=000000",
     },
   ],
   description:
