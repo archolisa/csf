@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   icons: [
     {
       rel: "icon",
-      url: "https://img.icons8.com/?size=100&id=39020&format=png&color=000000",
+      url: "https://i.ibb.co/DfryXrK4/acm-iit-logo.png",
     },
   ],
   description:
@@ -20,6 +20,7 @@ export const metadata: Metadata = {
     "Cyril and Susanna Foundation Isuofia",
     "Scholarship Anambra",
     "Scholarship Isuofia",
+    "Cyril Susanna"
   ],
   // authors: [{ name: "Cyril and Susanna Foundation", url: "https://cyrilandsusannafoundation.org" }],
   // openGraph: {
