@@ -18,24 +18,29 @@ const Home = () => {
       <div className="absolute top-[600px] left-[-150px] w-80 h-80 bg-light-red rounded-full blur-[80px] opacity-30"></div>
 
       <NavigationBar />
+      <header className="mt-24 px-8 text-background bg-[url('/assets/header_background_1.png')] bg-cover flex flex-col justify-center items-center w-full h-96 lg:px-24 lg:flex-row lg:h-screen lg:space-x-16 lg:space-y-0">
+  {/* Left side: Title */}
+  <div className="w-full lg:w-1/2 text-left text-white">
+    <h1 className="text-[3.5rem] lg:text-[6rem] font-extrabold leading-[1.1] drop-shadow-md max-w-xl ml-0 lg:ml-0">
+      CYRIL & SUSANNA 
+      <span className="block text-white text-[2.8rem] lg:text-[4.8rem]">
+        FOUNDATION
+      </span>
+    </h1>
+  </div>
 
-      <header className="mt-24 px-8 text-background bg-[url('/assets/header_background_1.png')] bg-cover flex flex-col space-y-4 justify-center items-center w-full h-96 lg:px-24 lg:flex-row lg:h-screen lg:space-x-4 lg:space-y-0">
-        <div className="w-full lg:w-1/3 lg:flex-1">
-          <h3 className="text-2xl lg:text-3xl 2xl:text-4xl">
-            Welcome to{" "}
-            <span className="text-accent-color-primary">CYRIL AND SUSANNA FOUNDATION.</span>
-          </h3>
-          <p className="font-raleway text-sm mt-2 lg:text-md xl:text-lg">
-            Scholarships and support for brilliant, deserving students from Isuofia and beyond. Together, we&apos;re shaping tomorrow&apos;s leaders-today!
-          </p>
-        </div>
-        <div className="flex-0 w-full lg:w-1/2 justify-end">
-          <h1 className="text-4xl lg:text-6xl leading-[1] lg:text-right">
-            Helping the less Privileged. <br />
-            <span className="text-accent-color-primary">Lighting the Path to a Brighter Future..</span>
-          </h1>
-        </div>
-      </header>
+  {/* Right side: Tagline */}
+  <div className="w-full lg:w-1/2 justify-end text-white mt-12 lg:mt-24">
+    <h1 className="text-4xl lg:text-6xl leading-[1.2] lg:text-left">
+      <span className="text-gray-800">
+        Lighting the Path to a Brighter Future...
+      </span>
+    </h1>
+  </div>
+</header>
+
+
+
 
       <main className="flex-1 flex flex-col items-center">
         {/* About Us */}

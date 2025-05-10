@@ -28,7 +28,7 @@ const Page = () => {
               <ul>
                 <li className="mb-12">
                   <Link
-                    href="mailto:info@cyrilandsusannafoundation.com"
+                    href="mailto:info@cyrilandsusannafoundation.org"
                     target="_blank"
                     className="flex items-center rounded-md p-3 bg-background"
                   >
@@ -55,7 +55,7 @@ const Page = () => {
                     className="flex items-center rounded-md p-3 bg-background"
                   >
                     <IoLogoInstagram className="w-7 h-7 mr-2" />
-                    <span className="text-gray-800">https://instagram.com/csfoundation</span>
+                    <span className="text-gray-800">https://instagram.com/candsfoundation</span>
                     
                   </Link>
                 </li>
@@ -67,7 +67,7 @@ const Page = () => {
                 >
                   <TbPhone className="w-7 h-7 mr-2" />
                   <span className="text-gray-800">
-                    +2348037651703
+                    08111813075, 08037651703, 08033073871
                   </span>
                   </Link>
                 </li>

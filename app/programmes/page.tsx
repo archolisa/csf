@@ -43,7 +43,7 @@ const scholarshipItems = [
 
 const Page = () => {
   const headerText =
-    "Empowering students through education — from Isuofia to the world. Learn how we’re building a future of possibilities through targeted scholarship support from Primary to Tertiary level.";
+    "Empowering students through education — from Nigeria to the world. Learn how we’re building a future of possibilities through targeted scholarship support from Primary to Tertiary level.";
 
   return (
     <>

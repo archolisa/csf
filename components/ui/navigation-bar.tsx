@@ -14,12 +14,12 @@ export const NavigationBar = () => {
 
   const links = [
     { href: "/", label: "Home" },
-    { href: "/team", label: "Team" },
-    { href: "/our-sponsor", label: "Our Sponsor" },
     { href: "/programmes", label: "Programmes" },
-    { href: "/beneficiaries", label: "Beneficiaries" },
-    { href: "/contact", label: "Contact Us" },
     { href: "/scholarships", label: "Scholarships" },
+    { href: "/our-sponsor", label: "Our Sponsor" },
+    { href: "/team", label: "Team" },
+    { href: "/beneficiaries", label: "Beneficiaries" },
+    { href: "/contact", label: "Contact Us" }
   ];
 
   // Listen for scroll events to toggle navbar height
