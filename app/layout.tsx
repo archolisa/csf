@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   icons: [
     {
       rel: "icon",
-      url: "https://img.icons8.com/?size=100&id=39020&format=png&color=000000",
+      url: "https://res.cloudinary.com/daxwsoeti/image/upload/v1753216956/favicon_pf2kxu.ico",
     },
   ],
   description:
@@ -16,42 +16,44 @@ export const metadata: Metadata = {
   keywords: [
     "Cyril and Susanna Foundation",
     "C&S Foundation",
-    "C&S",
+    "Cyril Susanna",
+    "Cyril and Susanna",
     "Cyril and Susanna Foundation Isuofia",
     "Scholarship Anambra",
+    "Scholarship Nigeria",
     "Scholarship Isuofia",
     "Cyril Susanna"
   ],
-  // authors: [{ name: "Cyril and Susanna Foundation", url: "https://cyrilandsusannafoundation.org" }],
-  // openGraph: {
-  //   title: "Cyril and Susanna Foundation",
-  //   description:
-  //     "The Official Website of Cyril and Susanna Foundation",
-  //   url: "https://cyrilandsusannafoundation.org/",
-  //   siteName: "Cyril and Susanna Foundation",
-  //   images: [
-  //     {
-  //       url: "../public/assets/cyril-susanna-logo.png",
-  //       width: 800,
-  //       height: 600,
-  //     },
-  //   ],
-  //   locale: "en_US",
-  //   type: "website",
-  // },
-  // twitter: {
-  //   card: "summary_large_image",
-  //   title: "Cyril and Susanna Foundation",
-  //   description:
-  //     "The Official Website of Cyril and Susanna Foundation",
-  //   images: ["../public/assets/cs_logo.png"],
-  // },
+  authors: [{ name: "Cyril and Susanna Foundation", url: "https://cyrilandsusannafoundation.org" }],
+  openGraph: {
+    title: "Cyril and Susanna Foundation",
+    description:
+      "The Official Website of Cyril and Susanna Foundation",
+    url: "https://cyrilandsusannafoundation.org/",
+    siteName: "Cyril and Susanna Foundation",
+    images: [
+      {
+        url: "https://res.cloudinary.com/daxwsoeti/image/upload/v1753216868/logo_csf_aqtd9o.png",
+        width: 800,
+        height: 600,
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Cyril and Susanna Foundation",
+    description:
+      "The Official Website of Cyril and Susanna Foundation",
+    images: ["https://res.cloudinary.com/daxwsoeti/image/upload/v1753216868/logo_csf_aqtd9o.png"],
+  },
   robots: {
-    index: false,
+    index: true,
     follow: true,
     googleBot: {
       index: true,
-      follow: false,
+      follow: true,
     },
   },
 };

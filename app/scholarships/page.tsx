@@ -5,6 +5,7 @@ import Link from "next/link";
 
 const Page = () => {
     const teamHeaderText = `Apply for Cyril & Susanna Foundation 2025/2026 Scholarship.`;
+    const logoImagePath = "/assets/logo_csf.png"; 
     
     return(
         <>
@@ -14,7 +15,7 @@ const Page = () => {
         <div className="absolute top-[600px] left-[-150px] w-80 h-80 bg-light-red rounded-full blur-[80px] opacity-30"></div>
         
         {/* Header */}
-        <Header pageName="" title="Scholarship Application." headerText={teamHeaderText} />
+        <Header pageName="" title="Scholarship Application." headerText={teamHeaderText} imagePath={logoImagePath}/>
         <div className="my-16 px-8 lg:px-24">
             <section className="my-8 flex gap-4 items-center">
                 <h2 className="flex-0 font-raleway text-xl w-1/2 md:w-1/3">Are you an Isuofia indigene studying Medicine, Nursing, Pharmacy, Computer Science, or Engineering? Apply Now!</h2>

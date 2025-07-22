@@ -3,7 +3,7 @@ import { Header } from '@/components/ui/page-header';
 import  Image  from "next/image";
 
 const Page = () => {
-    const sponsorImagePath = "/assets/cs_pictures/4.jpeg"; 
+    const logoImagePath = "/assets/logo_csf.png"; 
     const sponsorHeaderText = `Behind every great initiative are people who believe in its purpose. Get to know the individuals championing our journey.`;
 
     return (
@@ -14,7 +14,7 @@ const Page = () => {
             <div className="absolute top-[600px] left-[-150px] w-80 h-80 bg-light-red rounded-full blur-[80px] opacity-30"></div>
 
             {/* Header */}
-            <Header pageName="Our Sponsor" title="Meet Our Sponsor." headerText={sponsorHeaderText} imagePath={sponsorImagePath} />
+            <Header pageName="Our Sponsor" title="Meet Our Sponsor." headerText={sponsorHeaderText} imagePath={logoImagePath} />
 
             {/* Sponsor Section */}
             <section className="w-full my-8 px-8 lg:px-24 max-w-6xl mx-auto">

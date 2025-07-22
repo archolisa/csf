@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 // Footer component for the contact page
 export const ContactFooter = () => {
@@ -22,10 +23,10 @@ export const ContactFooter = () => {
             width={36}
             height={36}
           />
-          <p className="text-xs text-gray-400 my-4 text-center">
+          <Link href="https://archolisa.vercel.app"><p className="text-xs text-gray-400 my-4 text-center">
             Made with ❤ by
             <br /> Olisa Digital Solutions
-          </p>
+          </p></Link>
         </div>
       </div>
     </footer>
