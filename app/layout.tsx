@@ -1,4 +1,5 @@
 import { Raleway } from "next/font/google";
+import { Montserrat } from "next/font/google";
 import localFont from "next/font/local";
 import type { Metadata } from "next";
 import "./globals.css";
@@ -65,6 +66,13 @@ const raleway = Raleway({
   variable: "--font-raleway",
 });
 
+const montserrat = Montserrat({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-montserrat",
+  weight: ["400", "500", "600", "700"], // Include any weights you plan to use
+});
+
 const breeSerif = localFont({
   src: "../fonts/BreeSerif-Regular.ttf",
   display: "swap",
@@ -78,7 +86,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${raleway.variable} ${breeSerif.variable} antialiased`}>
+      <body className={`${raleway.variable} ${breeSerif.variable} ${montserrat.variable} antialiased`}>
         {children}
       </body>
     </html>

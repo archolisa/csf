@@ -11,6 +11,7 @@ export default {
     extend: {
       fontFamily: {
         raleway: ["var(--font-raleway)"],
+        montserrat: ["var(--font-montserrat)"],
         "bree-serif": ["var(--font-bree-serif)"],
       },
       colors: {
