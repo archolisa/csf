@@ -21,15 +21,15 @@
       "static/chunks/main-app.js",
       "static/chunks/app/page.js"
     ],
-    "/programmes/layout": [
+    "/our-sponsor/layout": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/programmes/layout.js"
+      "static/chunks/app/our-sponsor/layout.js"
     ],
-    "/programmes/page": [
+    "/our-sponsor/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/programmes/page.js"
+      "static/chunks/app/our-sponsor/page.js"
     ]
   }
 }
