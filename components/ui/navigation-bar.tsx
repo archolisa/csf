@@ -47,15 +47,15 @@ export const NavigationBar = () => {
             height={isScrolled ? 60 : 70}
             className="transition-all duration-300"
           />
-          <div
-            className={clsx(
-              "flex flex-col items-center sm:items-start justify-center font-montserrat font-semibold text-gray-900 leading-tight transition-all duration-300",
-              isScrolled ? "text-base" : "text-lg"
-            )}
-          >
-            <span>CYRIL & SUSANNA</span>
-            <span>FOUNDATION</span>
-          </div>
+         <div
+  className={clsx(
+    "flex flex-col items-center sm:items-start justify-center font-montserrat font-semibold text-gray-900 leading-tight transition-all duration-300",
+    isScrolled ? "text-base" : "text-lg"
+  )}
+>
+  <span>CYRIL & SUSANNA</span>
+  <span className="sm:pl-3 lg:pl-5 xl:pl-5">FOUNDATION</span>
+</div>
         </Link>
 
         {/* Desktop Menu */}

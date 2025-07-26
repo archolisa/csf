@@ -2,6 +2,7 @@ import { Raleway } from "next/font/google";
 import { Montserrat } from "next/font/google";
 import localFont from "next/font/local";
 import type { Metadata } from "next";
+import {DonateButton} from "@/components/ui/donate-button";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -88,6 +89,8 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${raleway.variable} ${breeSerif.variable} ${montserrat.variable} antialiased`}>
         {children}
+        {/* Floating Donate Button */}
+        <DonateButton />
       </body>
     </html>
   );
