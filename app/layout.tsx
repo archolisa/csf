@@ -1,4 +1,4 @@
-import { Raleway } from "next/font/google";
+import { Raleway, Michroma } from "next/font/google";
 import { Montserrat } from "next/font/google";
 import localFont from "next/font/local";
 import type { Metadata } from "next";
@@ -66,6 +66,11 @@ const raleway = Raleway({
   display: "swap",
   variable: "--font-raleway",
 });
+const michroma = Michroma({
+  subsets: ['latin'],
+  weight: ['400'], // Michroma only has a regular 400 weight
+  variable: '--font-michroma', // Assign its CSS variable
+});
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -87,7 +92,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${raleway.variable} ${breeSerif.variable} ${montserrat.variable} antialiased`}>
+      <body className={`${raleway.variable} ${michroma.variable} ${breeSerif.variable} ${montserrat.variable} antialiased`}>
         {children}
         {/* Floating Donate Button */}
         <DonateButton />

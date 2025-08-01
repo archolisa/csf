@@ -11,40 +11,81 @@ import { Footer } from "@/components/ui/footer";
 
 const Home = () => {
   return (
-    <div className="relative flex flex-col min-h-screen">
-      {/* Top left Blurred Circle */}
-      <div className="absolute top-[-100px] left-[-100px] w-80 h-80 bg-light-red rounded-full blur-[80px] opacity-30"></div>
-      {/* Mid left Blurred Circle */}
-      <div className="absolute top-[600px] left-[-150px] w-80 h-80 bg-light-red rounded-full blur-[80px] opacity-30"></div>
-
+    <div className="flex flex-col min-h-screen">
       <NavigationBar />
-      <header className="mt-24 px-8 text-background bg-[url('/assets/header_background_1.png')] bg-cover flex flex-col justify-center items-center w-full h-96 lg:px-24 lg:flex-row lg:h-screen lg:space-x-16 lg:space-y-0">
-  {/* Left side: Title */}
-  <div className="w-full lg:w-1/2 text-left text-white">
-    <h1 className="text-[3.5rem] lg:text-[6rem] font-extrabold leading-[1.1] drop-shadow-md max-w-xl ml-0 lg:ml-0">
-      CYRIL & SUSANNA 
-      <span className="block text-white text-[2.8rem] lg:text-[4.8rem]">
-        FOUNDATION
-      </span>
-    </h1>
-  </div>
 
-  {/* Right side: Tagline */}
-  <div className="w-full lg:w-1/2 justify-end text-white mt-12 lg:mt-24">
-    <h1 className="text-4xl lg:text-6xl leading-[1.2] lg:text-left">
-      <span className="text-gray-800">
-        Lighting the Path to a Brighter Future...
-      </span>
-    </h1>
-  </div>
-</header>
+      {/* ==================== HEADER WITH MICHROMA FONT ==================== */}
+      <header className="relative flex flex-col justify-center items-center w-full h-[85vh] lg:h-screen overflow-hidden">
+        {/* Background Video */}
+        <video 
+          autoPlay 
+          loop 
+          muted 
+          playsInline
+          className="absolute top-0 left-0 w-full h-full object-cover z-0"
+        >
+          <source src="/videos/header-background.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+
+        {/* Darker Overlay for Better Contrast */}
+        <div className="absolute top-0 left-0 w-full h-full bg-black/50 z-10"></div>
+
+        {/* Header Content Container */}
+        <div className="relative z-20 flex flex-col lg:flex-row items-center justify-center w-full px-8 lg:px-24 lg:space-x-16">
+          {/* Left side: Animated Title with new font */}
+          <div className="w-full lg:w-1/2 text-left text-white">
+            <h1 
+             
+              className="font-display font-michroma text-[2.5rem]  lg:text-[4.5rem] leading-none tracking-tight"
+              style={{
+                animation: `fadeInUp 1s ease-out forwards`,
+                animationDelay: '0.2s',
+                opacity: 0,
+                textShadow: '0px 3px 12px rgba(0,0,0,0.5)'
+              }}
+            >
+              CYRIL & SUSANNA
+              <span 
+                className="block text-white text-[2.5rem] lg:text-[4.2rem] sm: text-[2.2rem]"
+                style={{
+                  animation: `fadeInUp 1s ease-out forwards`,
+                  animationDelay: '0.6s',
+                  opacity: 0,
+                }}
+              >
+                FOUNDATION
+              </span>
+            </h1>
+          </div>
+
+          {/* Right side: Animated Tagline */}
+          <div className="w-full lg:w-1/2 justify-end text-white lg:pl-10 mt-12 lg:mt-24">
+            <h2 
+              className="text-3xl lg:text-3xl leading-[1.2] lg:text-left"
+              style={{
+                animation: `fadeInUp 1s ease-out forwards`,
+                animationDelay: '1s',
+                opacity: 0,
+              }}
+            >
+              <span className="font-michroma text-gray-200/90 font-light">
+                Lighting the Path to a Brighter Future...
+              </span>
+            </h2>
+          </div>
+        </div>
+      </header>
+      {/* ======================== END OF HEADER ======================== */}
 
 
+      <main className="relative flex-1 flex flex-col items-center bg-white">
+        {/* Blurred Circles */}
+        <div className="absolute top-[-100px] left-[-100px] w-80 h-80 bg-light-red rounded-full blur-[80px] opacity-30 -z-10"></div>
+        <div className="absolute top-[600px] left-[-150px] w-80 h-80 bg-light-red rounded-full blur-[80px] opacity-30 -z-10"></div>
 
-
-      <main className="flex-1 flex flex-col items-center">
-        {/* About Us */}
-        <section className="flex flex-col items-center lg:flex-row lg:items-start justify-between lg:h-[500px] p-8 lg:p-24 gap-4">
+        {/* ... Rest of your page content remains unchanged ... */}
+        <section className="flex flex-col items-center lg:flex-row lg:items-start justify-between lg:h-auto p-8 lg:p-24 gap-12">
           <div className="w-full flex flex-col items-center mt-4 lg:w-1/2 lg:mt-0 lg:h-full">
             <h2 className="text-lg 2xl:text-2xl text-center text-accent-color-primary">
               ABOUT US
@@ -56,7 +97,6 @@ Since its inception, the Foundation has launched several scholarship schemes aim
 Driven by a passion to uplift the next generation, the Cyril and Susanna Foundation believes in empowering young minds through education—nurturing talent, inspiring excellence, and transforming lives.
             </p>
           </div>
-
           <Image
             className="rounded-md"
             alt="C&S Foundation Picture"
@@ -67,12 +107,10 @@ Driven by a passion to uplift the next generation, the Cyril and Susanna Foundat
         </section>
         
         {/* Carousel Section */}
-        <section className="flex flex-col items-center lg:flex-row lg:items-start justify-between lg:h-[500px] p-8 lg:p-24 gap-4">
+        <section className="flex flex-col items-center lg:flex-row lg:items-start justify-between lg:h-auto p-8 lg:p-24 gap-12">
         <div className="w-full flex flex-col items-center mt-4 lg:w-1/2 lg:mt-0 lg:h-full">
             <CarouselPlugin />
           </div>
-          
-
           <div className="w-full flex flex-col items-center mt-4 lg:w-1/2 lg:mt-0 lg:h-full">
             <h2 className="text-lg 2xl:text-2xl text-center text-accent-color-primary">
               GALLERY
@@ -83,26 +121,13 @@ Driven by a passion to uplift the next generation, the Cyril and Susanna Foundat
             <Link href="/programmes">
               <Button variant="default" className="mt-4 2xl:text-lg 2xl:py-4">
                 VIEW OUR PROGRAMMES
-                <svg
-                  width="36"
-                  height="20"
-                  viewBox="0 0 49 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M2 12H47M47 12L36.6154 2M47 12L36.6154 22"
-                    stroke="#FFF5F5"
-                    strokeWidth="3"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
+                <svg width="36" height="20" viewBox="0 0 49 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M2 12H47M47 12L36.6154 2M47 12L36.6154 22" stroke="#FFF5F5" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
                 </svg>
               </Button>
             </Link>
           </div>
         </section>
-
 
         {/* Gallery Section */}
         <section className="mt-8 w-full relative flex flex-col items-center lg:flex-row lg:items-start justify-between lg:h-auto p-8 lg:p-24 gap-4">
@@ -123,12 +148,10 @@ Driven by a passion to uplift the next generation, the Cyril and Susanna Foundat
 
         {/* Team Section */}
         <TeamSection />
-
         {/* Newsletter Section */}
         <section className="w-full p-8 lg:p-24">
           <NewsletterSignup />
         </section>
-
         {/* Footer */}
         <Footer />
       </main>
