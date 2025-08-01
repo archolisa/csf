@@ -47,7 +47,7 @@ const Home = () => {
             >
               CYRIL & SUSANNA
               <span 
-                className="block text-white text-[2.5rem] lg:text-[4.2rem] sm: text-[2.2rem]"
+                className="block text-white text-[2.5rem] lg:text-[4.2rem] sm: text-[2.1rem]"
                 style={{
                   animation: `fadeInUp 1s ease-out forwards`,
                   animationDelay: '0.6s',
