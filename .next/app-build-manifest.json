@@ -31,20 +31,15 @@
       "static/chunks/main-app.js",
       "static/chunks/app/programmes/page.js"
     ],
-    "/donate/layout": [
+    "/team/layout": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/donate/layout.js"
+      "static/chunks/app/team/layout.js"
     ],
-    "/donate/page": [
+    "/team/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/donate/page.js"
-    ],
-    "/_not-found/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/_not-found/page.js"
+      "static/chunks/app/team/page.js"
     ],
     "/scholarships/layout": [
       "static/chunks/webpack.js",
@@ -56,16 +51,6 @@
       "static/chunks/main-app.js",
       "static/chunks/app/scholarships/page.js"
     ],
-    "/contact/layout": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/contact/layout.js"
-    ],
-    "/contact/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/contact/page.js"
-    ],
     "/our-sponsor/layout": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
@@ -75,6 +60,16 @@
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/our-sponsor/page.js"
+    ],
+    "/donate/layout": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/donate/layout.js"
+    ],
+    "/donate/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/donate/page.js"
     ]
   }
 }

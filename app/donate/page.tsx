@@ -49,7 +49,7 @@ const Page = () => {
                             At the Cyril & Susanna Foundation, we are committed to nurturing the potential of bright young minds in Isuofia. Your donation directly funds scholarships for students in critical fields like Medicine, Nursing, Pharmacy, Computer Science, and Engineering.
                         </p>
                         <p className="text-lg">
-                            By giving, you are not just supporting an individual's education; you are investing in the future of our community and empowering the leaders of tomorrow.
+                            By giving, you are not just supporting an individual&aposs education; you are investing in the future of our community and empowering the leaders of tomorrow.
                         </p>
                     </div>
                     <div className="relative w-full h-80 rounded-lg overflow-hidden shadow-lg">
@@ -109,7 +109,7 @@ const Page = () => {
                             </div>
                         </div>
                         <div className="mt-8 bg-blue-100 border-l-4 border-blue-500 text-blue-700 p-4 rounded-md">
-                            <p className="text-sm"><span className="font-bold">Important:</span> Please ensure the account name matches "{bankDetails.accountName}" when you make the transfer.</p>
+                            <p className="text-sm"><span className="font-bold">Important: <br/> </span> Please ensure the account name matches &quot{bankDetails.accountName}&quot when making the transfer.</p>
                         </div>
                     </div>
                 </section>
