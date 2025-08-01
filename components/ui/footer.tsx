@@ -31,7 +31,7 @@ export const Footer = () => {
             variant="outline"
             className="border-accent-color-primary text-accent-color-primary hover:bg-accent-color-primary hover:text-background px-6 py-2"
           >
-            How to donate?
+            <Link href="/donate">How to Donate?</Link> 
           </Button>
         </div>
       </div>

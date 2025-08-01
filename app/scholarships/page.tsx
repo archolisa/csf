@@ -1,5 +1,4 @@
 import { Header } from "@/components/ui/page-header";
-// import { StayInTouch } from "@/components/get-involved/stay-in-touch";
 import Image from "next/image";
 import Link from "next/link";
 

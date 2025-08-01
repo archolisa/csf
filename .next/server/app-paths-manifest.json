@@ -1,6 +1,10 @@
 {
-  "/page": "app/page.js",
+  "/favicon.ico/route": "app/favicon.ico/route.js",
   "/_not-found/page": "app/_not-found/page.js",
+  "/page": "app/page.js",
+  "/contact/page": "app/contact/page.js",
+  "/programmes/page": "app/programmes/page.js",
   "/our-sponsor/page": "app/our-sponsor/page.js",
-  "/scholarships/page": "app/scholarships/page.js"
+  "/scholarships/page": "app/scholarships/page.js",
+  "/donate/page": "app/donate/page.js"
 }

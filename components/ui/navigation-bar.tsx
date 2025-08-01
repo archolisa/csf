@@ -33,7 +33,7 @@ export const NavigationBar = () => {
   return (
     <nav
       className={clsx(
-        "z-10 w-full fixed top-0 left-0 px-6 lg:px-24 bg-background flex justify-center items-center transition-all duration-300",
+        "z-50 w-full fixed top-0 left-0 px-6 lg:px-24 bg-background flex justify-center items-center transition-all duration-300",
         isScrolled ? "h-20" : "h-24"
       )}
     >
