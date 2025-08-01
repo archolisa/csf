@@ -60,7 +60,7 @@ const Home = () => {
           </div>
 
           {/* Right side: Animated Tagline */}
-          <div className="w-full lg:w-1/2 justify-end text-white lg:pl-10 mt-12 lg:mt-24">
+          <div className="w-full lg:w-1/2 justify-end text-white lg:pl-20 mt-24 lg:mt-36">
             <h2 
               className="text-3xl lg:text-3xl leading-[1.2] lg:text-left"
               style={{

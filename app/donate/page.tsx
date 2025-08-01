@@ -109,7 +109,7 @@ const Page = () => {
                             </div>
                         </div>
                         <div className="mt-8 bg-blue-100 border-l-4 border-blue-500 text-blue-700 p-4 rounded-md">
-                            <p className="text-sm"><span className="font-bold">Important: <br/> </span> Please ensure the account name matches &quot{bankDetails.accountName}&quot when making the transfer.</p>
+                            <p className="text-sm"><span className="font-bold">Important: <br/> </span> Please ensure the account name matches {bankDetails.accountName} when making the transfer.</p>
                         </div>
                     </div>
                 </section>
