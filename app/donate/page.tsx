@@ -117,7 +117,7 @@ const Page = () => {
                 {/* NEW: Contact Us Section */}
                 <section className="text-center font-raleway my-16">
                     <p className="text-lg">
-                        If you have any question, Please <Link href="/contact" className="text-accent-color-primary font-bold underline hover:opacity-80">CLICK HERE</Link> to contact us 
+                        If you have any question?, Please <Link href="/contact" className="text-accent-color-primary font-bold underline hover:opacity-80">CLICK HERE</Link> to contact us 
                         or call us on <a href="tel:+2348037651703" className="text-accent-color-primary font-bold underline hover:opacity-80">+234 (0) 803 765 1703</a>.
                     </p>
                 </section>
