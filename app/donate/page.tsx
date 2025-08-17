@@ -77,7 +77,7 @@ const Page = () => {
                                 <span className="text-lg">$</span>
                                 <input type="number" value={donationAmount} onChange={(e) => setDonationAmount(Number(e.target.value))} className="text-2xl font-bold p-2 border-b-2 border-accent-color-primary focus:outline-none w-32 text-center"/>
                             </div>
-                            <Link href="https://paypal.com" className="text-center" target="_blank">
+                            <Link href="https://www.paypal.com/ncp/payment/M8HFCQ7HJPK9N.com" className="text-center" target="_blank">
                                 <button className="font-raleway cursor-pointer bg-green-600 text-white py-4 px-12 text-xl rounded-lg mx-auto transition duration-300 hover:bg-green-700">Donate Now</button>
                             </Link>
                         </>
