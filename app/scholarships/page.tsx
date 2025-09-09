@@ -45,8 +45,8 @@ const Page = () => {
                     <ul className="pl-0 mt-6 flex flex-col gap-4 crystyal-style-list">
                         <li>Must be an Indigene of Isuofia, Aguata L.G.A</li>
                         <li>Must be enrolled as a full-time student in an undergraduate programme at an accredited Nigerian University.</li>
-                        <li>O&apos;Level Result (WAEC/NECO), Jamb Result.</li>
-                        <li>Admission Letter, etc.</li>
+                        <li>O&apos;Level Result (WAEC/NECO) and Jamb Result.</li>
+                        <li>Admission Letter etc.</li>
                     </ul>
                 </section>
             </div>
