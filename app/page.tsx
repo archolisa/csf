@@ -32,8 +32,7 @@ const Home = () => {
         <div className="absolute top-0 left-0 w-full h-full bg-black/50 z-10"></div>
 
         {/* Header Content Container */}
-        <div className="relative z-20 flex flex-col lg:flex-row items-center justify-center w-full px-8 lg:px-24 lg:space-x-16">
-          {/* Left side: Animated Title with new font */}
+        <div className="relative z-20 mt-20 lg:mt-0 flex flex-col lg:flex-row items-center justify-center w-full px-8 lg:px-24 lg:space-x-16">          {/* Left side: Animated Title with new font */}
           <div className="w-full lg:w-1/2 text-left text-white">
             <h1 
              
@@ -73,6 +72,24 @@ const Home = () => {
                 Lighting the Path to a Brighter Future...
               </span>
             </h2>
+            {/* NEW: Scholarship CTA Section */}
+            <div 
+              className="mt-8 p-6 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg w-full max-w-md"
+              style={{
+                animation: `fadeInUp 1s ease-out forwards`,
+                animationDelay: '1.4s', // Last item to animate
+                opacity: 0,
+              }}
+            >
+              <p className="font-raleway text-white font-semibold text-lg">
+                The 2025 Undergraduate Scholarship Application is Now Open.
+              </p>
+              <Link href="/scholarships" className="font-raleway mt-4 inline-block">
+                <Button variant="default" size="lg">
+                  Apply Now
+                </Button>
+              </Link>
+            </div>
           </div>
         </div>
       </header>
