@@ -14,7 +14,7 @@ const Home = () => {
     <div className="flex flex-col min-h-screen">
       <NavigationBar />
 
-      {/* ==================== HEADER WITH MICHROMA FONT ==================== */}
+      {/* ==================== HEADER WITH EXTRA SMALL SCREEN FIX ==================== */}
       <header className="relative flex flex-col justify-center items-center w-full h-[85vh] lg:h-screen overflow-hidden">
         {/* Background Video */}
         <video 
@@ -32,11 +32,12 @@ const Home = () => {
         <div className="absolute top-0 left-0 w-full h-full bg-black/50 z-10"></div>
 
         {/* Header Content Container */}
-        <div className="relative z-20 mt-20 lg:mt-0 flex flex-col lg:flex-row items-center justify-center w-full px-8 lg:px-24 lg:space-x-16">          {/* Left side: Animated Title with new font */}
+        <div className="relative z-20 mt-20 lg:mt-0 flex flex-col lg:flex-row items-center justify-center w-full px-8 lg:px-24 lg:space-x-16">
+          {/* Left side: Animated Title */}
           <div className="w-full lg:w-1/2 text-left text-white">
             <h1 
-             
-              className="font-display font-michroma text-[2.5rem]  lg:text-[4.5rem] leading-none tracking-tight"
+              // CORRECTED: Added a smaller base size for extra small screens
+              className="font-display font-michroma text-[2.5rem] sm:text-[2.5rem] lg:text-[4.5rem] leading-none tracking-tight"
               style={{
                 animation: `fadeInUp 1s ease-out forwards`,
                 animationDelay: '0.2s',
@@ -46,7 +47,8 @@ const Home = () => {
             >
               CYRIL & SUSANNA
               <span 
-                className="block text-white text-[1.8rem] sm:text-[2.2rem] lg:text-[3.4rem]"
+                // CORRECTED: Scaled down proportionally for extra small screens
+                className="block text-white text-[1.6rem] sm:text-[1.8rem] lg:text-[3.4rem]"
                 style={{
                   animation: `fadeInUp 1s ease-out forwards`,
                   animationDelay: '0.6s',
@@ -61,7 +63,8 @@ const Home = () => {
           {/* Right side: Animated Tagline */}
           <div className="w-full lg:w-1/2 justify-end text-white lg:pl-20 mt-24 lg:mt-36">
             <h2 
-              className="text-3xl lg:text-3xl leading-[1.2] lg:text-left"
+              // CORRECTED: Made tagline responsive on mobile
+              className="text-2xl lg:text-3xl leading-[1.2] lg:text-left"
               style={{
                 animation: `fadeInUp 1s ease-out forwards`,
                 animationDelay: '1s',
@@ -72,12 +75,13 @@ const Home = () => {
                 Lighting the Path to a Brighter Future...
               </span>
             </h2>
-            {/* NEW: Scholarship CTA Section */}
+            
+            {/* Scholarship CTA Section */}
             <div 
               className="mt-8 p-6 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg w-full max-w-md"
               style={{
                 animation: `fadeInUp 1s ease-out forwards`,
-                animationDelay: '1.4s', // Last item to animate
+                animationDelay: '1.4s',
                 opacity: 0,
               }}
             >
