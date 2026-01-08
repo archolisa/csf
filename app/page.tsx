@@ -8,6 +8,7 @@ import { Button } from "@/components/ui/button";
 import { TeamSection } from "@/components/team-section";
 import { NewsletterSignup } from "@/components/newsletter-signup";
 import { Footer } from "@/components/ui/footer";
+import { ScholarshipAwards2026 } from "@/components/awards/scholarship-awards-2026";
 
 const Home = () => {
   return (
@@ -147,6 +148,9 @@ Driven by a passion to uplift the next generation, the Cyril and Susanna Foundat
             <Feedback/>
           </div>
         </section>
+
+        {/* 2026 Scholarship Awards Section */}
+        <ScholarshipAwards2026 />
 
         {/* Team Section */}
         <TeamSection />
