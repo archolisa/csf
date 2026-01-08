@@ -1,6 +1,5 @@
 import { Header } from "@/components/ui/page-header";
 import Image from "next/image";
-import Link from "next/link";
 
 const Page = () => {
     const teamHeaderText = `Apply for Cyril & Susanna Foundation 2025/2026 Scholarship.`;

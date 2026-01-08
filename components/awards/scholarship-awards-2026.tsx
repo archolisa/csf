@@ -133,7 +133,7 @@ export const ScholarshipAwards2026 = () => {
                     className="mt-16 bg-gradient-to-r from-accent-color-primary/5 to-accent-color-primary/10 rounded-lg p-8 text-center"
                 >
                     <p className="font-raleway text-gray-700 text-lg">
-                        Are you an Isuofia indigene interested in applying for next year's scholarship? 
+                        Are you an Isuofia indigene interested in applying for next year&apos;s scholarship? 
                         <br/>
                         <span className="font-semibold text-accent-color-primary">
                             Stay tuned for the 2026 application cycle!
