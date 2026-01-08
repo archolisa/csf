@@ -12,7 +12,7 @@ export const ScholarshipAwards2026 = () => {
         { src: '/assets/award-2026-3.JPG', description: 'Presentation of award by Rev. Fr. Ogumelu' },
         { src: '/assets/award-2026-4.JPG', description: 'Presentation of award by Chief Ndubuisi Okeke' },
         { src: '/assets/award-2026-5.JPG', description: 'A Beneficiary presents an Art Work to the sponsor' },
-        { src: '/assets/award-2026-6.jpg', description: 'Cross sectional picture of the beneficiaries with the sponsor' },
+        { src: '/assets/award-2026-6.jpg', description: 'Cross sectional picture of some of the beneficiaries with the sponsor' },
     ];
 
     const ref = useRef(null);
