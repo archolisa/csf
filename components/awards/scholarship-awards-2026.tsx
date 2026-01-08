@@ -12,6 +12,7 @@ export const ScholarshipAwards2026 = () => {
         { src: '/assets/award-2026-3.JPG', description: 'Presentation of award by Rev. Fr. Ogumelu' },
         { src: '/assets/award-2026-4.JPG', description: 'Presentation of award by Chief Ndubuisi Okeke' },
         { src: '/assets/award-2026-5.JPG', description: 'A Beneficiary presents an Art Work to the sponsor' },
+        { src: '/assets/award-2026-6.jpg', description: 'Cross sectional picture of the beneficiaries with the sponsor' },
     ];
 
     const ref = useRef(null);
@@ -57,7 +58,7 @@ export const ScholarshipAwards2026 = () => {
                         2026 Scholarship Award Recipients
                     </h2>
                     <p className="font-raleway text-sm lg:text-lg text-gray-700 max-w-3xl mx-auto leading-relaxed">
-                        On <strong>January 3rd, 2026</strong>, the Cyril and Susanna Foundation honoured its 2026 scholarship award recipients in a memorable event held in <strong>Isuofia, Anambra State</strong>. Each of the successful awardees received <strong>₦250,000</strong> to support their educational journey.
+                        On <strong>January 3rd, 2026</strong>, the Cyril and Susanna Foundation honoured its 2025 scholarship award recipients in a memorable event held in <strong>Isuofia, Anambra State</strong>. Each of the successful awardees received <strong>₦250,000</strong> to support their educational journey.
                     </p>
                 </motion.div>
 
@@ -89,7 +90,7 @@ export const ScholarshipAwards2026 = () => {
                                 transition={{ duration: 0.3 }}
                                 onClick={() => setSelectedImageIndex(index)}
                                 className={`relative overflow-hidden rounded-lg shadow-lg group cursor-pointer
-                                    ${index === 0 || index === 5 ? "row-span-2 h-96" : "h-48"}`}
+                                    ${(index === 0 || index === 5) ? "row-span-2 h-96" : "h-48"}`}
                             >
                                 <Image
                                     src={photo.src}
