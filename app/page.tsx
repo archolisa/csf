@@ -75,25 +75,6 @@ const Home = () => {
                 Lighting the Path to a Brighter Future...
               </span>
             </h2>
-            
-            {/* Scholarship CTA Section */}
-            <div 
-              className="mt-8 p-6 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg w-full max-w-md"
-              style={{
-                animation: `fadeInUp 1s ease-out forwards`,
-                animationDelay: '1.4s',
-                opacity: 0,
-              }}
-            >
-              <p className="font-raleway text-white font-semibold text-lg">
-                The 2025 Undergraduate Scholarship Application is Now Open.
-              </p>
-              <Link href="/scholarships" className="font-raleway mt-4 inline-block">
-                <Button variant="default" size="lg">
-                  Apply Now
-                </Button>
-              </Link>
-            </div>
           </div>
         </div>
       </header>

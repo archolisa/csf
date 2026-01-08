@@ -29,13 +29,11 @@ const Page = () => {
                     <div className="z-[9] flex flex-col gap-8 font-raleway bg-fontcolor text-background rounded-lg p-8 w-full md:w-1/2">
                         <h2 className="text-2xl text-center">Undergraduate Application</h2>
                         <p className="text-sm font-lighter text-center">
-                        Apply for the Cyril & Susanna Foundation 2025/2026 undergraduate Scholarship below
+                        The 2025 Undergraduate Scholarship Application is Now Closed
                         </p>
-                        <Link href="https://forms.gle/PmSUvju4cp4BXzRR7" className="text-center" target="_blank">
-                            <button className="font-raleway cursor-pointer bg-accent-color-primary text-background py-4 px-8 w-full md:w-1/2 mx-auto transition duration-300 hover:opacity-80">
-                                Apply Here!
-                            </button>
-                        </Link>
+                        <button hidden className="font-raleway cursor-not-allowed bg-gray-400 text-background py-4 px-8 w-full md:w-1/2 mx-auto opacity-60">
+                            Apply Now
+                        </button>
                     </div>
                 </section>
             
