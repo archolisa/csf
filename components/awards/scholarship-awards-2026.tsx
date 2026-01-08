@@ -82,15 +82,14 @@ export const ScholarshipAwards2026 = () => {
                     </h3>
                     
                     {/* Desktop Grid Layout */}
-                    <div className="hidden lg:grid grid-cols-3 gap-6">
+                    <div className="hidden lg:grid grid-cols-2 gap-6">
                         {awardPhotos.map((photo, index) => (
                             <motion.div
                                 key={index}
                                 whileHover={{ scale: 1.05 }}
                                 transition={{ duration: 0.3 }}
                                 onClick={() => setSelectedImageIndex(index)}
-                                className={`relative overflow-hidden rounded-lg shadow-lg group cursor-pointer
-                                    ${(index === 0 || index === 5) ? "row-span-2 h-96" : "h-48"}`}
+                                className={`relative overflow-hidden rounded-lg shadow-lg group cursor-pointer h-64`}
                             >
                                 <Image
                                     src={photo.src}
