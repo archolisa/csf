@@ -1,7 +1,8 @@
 "use client";
 import { motion } from "framer-motion";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import Image from "next/image";
+import { X } from "lucide-react";
 
 export const ScholarshipAwards2026 = () => {
     // Array of award photos with descriptions
@@ -14,6 +15,7 @@ export const ScholarshipAwards2026 = () => {
     ];
 
     const ref = useRef(null);
+    const [selectedImageIndex, setSelectedImageIndex] = useState<number | null>(null);
 
     const containerVariants = {
         hidden: { opacity: 0 },
@@ -85,7 +87,8 @@ export const ScholarshipAwards2026 = () => {
                                 key={index}
                                 whileHover={{ scale: 1.05 }}
                                 transition={{ duration: 0.3 }}
-                                className={`relative overflow-hidden rounded-lg shadow-lg group
+                                onClick={() => setSelectedImageIndex(index)}
+                                className={`relative overflow-hidden rounded-lg shadow-lg group cursor-pointer
                                     ${index === 0 || index === 5 ? "row-span-2 h-96" : "h-48"}`}
                             >
                                 <Image
@@ -104,12 +107,15 @@ export const ScholarshipAwards2026 = () => {
                     </div>
 
                     {/* Mobile Grid Layout */}
-                    <div className="lg:hidden grid grid-cols-2 gap-4">
-                        {awardPhotos.slice(0, 4).map((photo, index) => (
+                    <div className="lg:hidden flex flex-wrap justify-center gap-4">
+                        {awardPhotos.map((photo, index) => (
                             <motion.div
                                 key={index}
+                                onClick={() => setSelectedImageIndex(index)}
                                 whileHover={{ scale: 1.05 }}
-                                className="relative overflow-hidden rounded-lg shadow-lg h-48"
+                                className={`relative overflow-hidden rounded-lg shadow-lg h-48 cursor-pointer ${
+                                    index === 4 ? 'w-[calc(50%-8px)]' : 'w-[calc(50%-8px)]'
+                                }`}
                             >
                                 <Image
                                     src={photo.src}
@@ -126,6 +132,99 @@ export const ScholarshipAwards2026 = () => {
                         ))}
                     </div>
                 </motion.div>
+
+                {/* Full Screen Image Modal for Mobile and Desktop */}
+                {selectedImageIndex !== null && (
+                    <motion.div
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        onClick={() => setSelectedImageIndex(null)}
+                        className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4"
+                    >
+                        <motion.div
+                            initial={{ scale: 0.9 }}
+                            animate={{ scale: 1 }}
+                            exit={{ scale: 0.9 }}
+                            onClick={(e) => e.stopPropagation()}
+                            className="relative w-full h-full flex flex-col items-center justify-center"
+                            drag="x"
+                            dragElastic={0.2}
+                            onDragEnd={(e, info) => {
+                                if (info.offset.x > 50) {
+                                    // Swiped right - go to previous image
+                                    setSelectedImageIndex((prev) => 
+                                        prev !== null && prev > 0 ? prev - 1 : null
+                                    );
+                                } else if (info.offset.x < -50) {
+                                    // Swiped left - go to next image
+                                    setSelectedImageIndex((prev) => 
+                                        prev !== null && prev < awardPhotos.length - 1 ? prev + 1 : null
+                                    );
+                                }
+                            }}
+                        >
+                            <button
+                                onClick={() => setSelectedImageIndex(null)}
+                                className="absolute top-4 right-4 z-60 bg-white/20 hover:bg-white/40 p-2 rounded-full transition-colors"
+                                aria-label="Close image"
+                            >
+                                <X className="w-6 h-6 text-white" />
+                            </button>
+
+                            <div className="relative w-full h-full max-h-[80vh] flex items-center justify-center">
+                                <Image
+                                    src={awardPhotos[selectedImageIndex].src}
+                                    alt={awardPhotos[selectedImageIndex].description}
+                                    fill
+                                    className="object-contain"
+                                    onClick={() => {
+                                        // If it's the last image, close. Otherwise, go to next
+                                        if (selectedImageIndex === awardPhotos.length - 1) {
+                                            setSelectedImageIndex(null);
+                                        } else {
+                                            setSelectedImageIndex(selectedImageIndex + 1);
+                                        }
+                                    }}
+                                />
+                            </div>
+
+                            {/* Navigation Arrows */}
+                            {selectedImageIndex > 0 && (
+                                <button
+                                    onClick={() => setSelectedImageIndex(selectedImageIndex - 1)}
+                                    className="absolute left-4 top-1/2 -translate-y-1/2 z-60 bg-white/20 hover:bg-white/40 p-2 rounded-full transition-colors"
+                                    aria-label="Previous image"
+                                >
+                                    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                                    </svg>
+                                </button>
+                            )}
+                            {selectedImageIndex < awardPhotos.length - 1 && (
+                                <button
+                                    onClick={() => setSelectedImageIndex(selectedImageIndex + 1)}
+                                    className="absolute right-4 top-1/2 -translate-y-1/2 z-60 bg-white/20 hover:bg-white/40 p-2 rounded-full transition-colors"
+                                    aria-label="Next image"
+                                >
+                                    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                                    </svg>
+                                </button>
+                            )}
+
+                            {/* Image Counter and Description */}
+                            <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4">
+                                <p className="text-white text-center text-sm font-raleway mb-2">
+                                    {awardPhotos[selectedImageIndex].description}
+                                </p>
+                                <p className="text-white/60 text-xs text-center">
+                                    {selectedImageIndex + 1} of {awardPhotos.length}
+                                </p>
+                            </div>
+                        </motion.div>
+                    </motion.div>
+                )}
 
                 {/* Call to Action Section */}
                 <motion.div

@@ -131,6 +131,8 @@ Driven by a passion to uplift the next generation, the Cyril and Susanna Foundat
             </Link>
           </div>
         </section>
+          {/* 2026 Scholarship Awards Section */}
+        <ScholarshipAwards2026 />
 
         {/* Gallery Section */}
         <section className="mt-8 w-full relative flex flex-col items-center lg:flex-row lg:items-start justify-between lg:h-auto p-8 lg:p-24 gap-4">
@@ -149,8 +151,7 @@ Driven by a passion to uplift the next generation, the Cyril and Susanna Foundat
           </div>
         </section>
 
-        {/* 2026 Scholarship Awards Section */}
-        <ScholarshipAwards2026 />
+      
 
         {/* Team Section */}
         <TeamSection />
