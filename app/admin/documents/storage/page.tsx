@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import AdminSidebar from "@/components/admin/sidebar";
 import AdminTopBar from "@/components/admin/top-bar";
@@ -9,7 +9,7 @@ import FilePreviewModal from "@/components/admin/file-preview-modal";
 import ConfirmModal from "@/components/admin/confirm-modal";
 import { AdminSession } from "@/lib/interfaces";
 import { AdminFile, FileCategory, formatFileSize, getFileIcon, getFileCategoryLabel } from "@/lib/admin-utils";
-import { Upload, FolderPlus, Trash2, Download, Eye, MoreVertical, Edit2, Check, X } from "lucide-react";
+import { FolderPlus, Trash2, Download, Eye, MoreVertical, Edit2, Check, X } from "lucide-react";
 
 export default function AdminStoragePage() {
   const router = useRouter();
@@ -18,7 +18,7 @@ export default function AdminStoragePage() {
   const [isLoading, setIsLoading] = useState(true);
   const [selectedCategory, setSelectedCategory] = useState<FileCategory | "all">("all");
   const [searchQuery, setSearchQuery] = useState("");
-  const [dragActive, setDragActive] = useState(false);
+
   const [isPreviewOpen, setIsPreviewOpen] = useState(false);
   const [selectedFile, setSelectedFile] = useState<{
     id: string;

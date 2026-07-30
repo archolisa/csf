@@ -8,7 +8,6 @@ import {
   LayoutDashboard,
   Users,
   FileText,
-  BarChart3,
   Settings,
   LogOut,
   Menu,

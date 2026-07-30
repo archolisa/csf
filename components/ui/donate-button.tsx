@@ -8,11 +8,6 @@ export const DonateButton = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const scrollTimeout = useRef<NodeJS.Timeout | null>(null);
 
-  // Hide the donate button on all admin pages
-  if (pathname?.startsWith("/admin")) {
-    return null;
-  }
-
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(true);
@@ -34,6 +29,11 @@ export const DonateButton = () => {
       if (scrollTimeout.current) clearTimeout(scrollTimeout.current);
     };
   }, []);
+
+  // Hide the donate button on all admin pages
+  if (pathname?.startsWith("/admin")) {
+    return null;
+  }
 
   return (
     <a

@@ -76,7 +76,7 @@ export default function ApplicantsCards({
         const hasJamb = !!applicant.jamb_result_url;
         const hasWaec = !!applicant.waec_result_url;
         const hasAdmission = !!applicant.admission_letter_url;
-        const hasPhoto = !!applicant.passport_photo_url;
+
 
         return (
           <div

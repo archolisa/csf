@@ -28,6 +28,7 @@ export default function AdminTopBar({
   
   // Search state
   const [isSearching, setIsSearching] = useState(false);
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const [searchResults, setSearchResults] = useState<{ applicants: any[], documents: any[] } | null>(null);
   const searchContainerRef = useRef<HTMLDivElement>(null);
   const profileMenuRef = useRef<HTMLDivElement>(null);
@@ -145,6 +146,7 @@ export default function AdminTopBar({
                             <div>
                               <h4 className="px-3 py-2 text-xs font-bold text-slate-400 uppercase tracking-wider">Applicants</h4>
                               <div className="space-y-1">
+                                {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
                                 {searchResults.applicants.map((app: any) => (
                                   <Link
                                     key={app.id}
@@ -170,6 +172,7 @@ export default function AdminTopBar({
                             <div className={searchResults.applicants.length > 0 ? "pt-2 border-t border-slate-100" : ""}>
                               <h4 className="px-3 py-2 text-xs font-bold text-slate-400 uppercase tracking-wider">Documents</h4>
                               <div className="space-y-1">
+                                {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
                                 {searchResults.documents.map((doc: any) => (
                                   <Link
                                     key={doc.id}
