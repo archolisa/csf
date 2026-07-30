@@ -1,10 +1,17 @@
 "use client";
 
 import React, { useState, useEffect, useRef } from "react";
+import { usePathname } from "next/navigation";
 
 export const DonateButton = () => {
+  const pathname = usePathname();
   const [isScrolled, setIsScrolled] = useState(false);
   const scrollTimeout = useRef<NodeJS.Timeout | null>(null);
+
+  // Hide the donate button on all admin pages
+  if (pathname?.startsWith("/admin")) {
+    return null;
+  }
 
   useEffect(() => {
     const handleScroll = () => {

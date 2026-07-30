@@ -41,3 +41,5 @@ next-env.d.ts
 /.next
 .next/trace
 .env*.local
+scratch/
+public/uploads/

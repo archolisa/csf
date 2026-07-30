@@ -1,6 +1,13 @@
 {
-  "/page": "app/page.js",
-  "/scholarships/page": "app/scholarships/page.js",
-  "/our-sponsor/page": "app/our-sponsor/page.js",
-  "/team/page": "app/team/page.js"
+  "/api/admin/login/route": "app/api/admin/login/route.js",
+  "/api/admin/activity/recent/route": "app/api/admin/activity/recent/route.js",
+  "/api/admin/documents/route": "app/api/admin/documents/route.js",
+  "/api/admin/dashboard/stats/route": "app/api/admin/dashboard/stats/route.js",
+  "/api/admin/applications/route": "app/api/admin/applications/route.js",
+  "/_not-found/page": "app/_not-found/page.js",
+  "/admin/dashboard/page": "app/admin/dashboard/page.js",
+  "/admin/applicants/page": "app/admin/applicants/page.js",
+  "/admin/users/page": "app/admin/users/page.js",
+  "/admin/login/page": "app/admin/login/page.js",
+  "/admin/documents/page": "app/admin/documents/page.js"
 }

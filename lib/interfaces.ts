@@ -30,4 +30,60 @@ export interface BoardMember {
     socials: SocialLinks;
     category: TeamCategory;
 }
+
+// Admin Dashboard Interfaces
+export interface Admin {
+    id: number;
+    email: string;
+    name: string;
+    created_at: string;
+    updated_at: string;
+}
+
+export interface ScholarshipApplication {
+    id: string;
+    applicant_name: string;
+    email: string;
+    phone?: string;
+    field_of_study?: string;
+    gpa?: number;
+    status: "pending" | "under_review" | "awarded" | "rejected";
+    submitted_at: string;
+    updated_at: string;
+    // New fields from Google Sheet
+    date_of_birth?: string;
+    age?: number;
+    village?: string;
+    jamb_score?: number;
+    is_indigene?: string;
+    home_address?: string;
+    sponsor_name?: string;
+    sponsor_phone?: string;
+    institution?: string;
+    level?: string;
+    personal_statement?: string;
+    jamb_result_url?: string;
+    waec_result_url?: string;
+    admission_letter_url?: string;
+    passport_photo_url?: string;
+    batch?: string;
+}
+
+export interface Document {
+    id: string;
+    application_id?: string | null;
+    admin_id: string;
+    file_name: string;
+    file_type: string;
+    file_path: string;
+    file_size: number;
+    uploaded_at: string;
+}
+
+export interface AdminSession {
+    adminId: string | number;
+    email: string;
+    name: string;
+    role?: string;
+}
   
