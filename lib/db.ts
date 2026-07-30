@@ -139,11 +139,12 @@ export const AuditLog =
 
 // Default admin users
 const DEFAULT_ADMINS = [
-  { email: "admin@cyrilandsusannafoundation.org", password: "password123", name: "Admin User", role: "super_admin" },
-  { email: "director@cyrilandsusannafoundation.org", password: "director2024", name: "Director", role: "super_admin" },
-  { email: "coordinator@cyrilandsusannafoundation.org", password: "coordinator2024", name: "Program Coordinator", role: "reviewer" },
-  { email: "reviewer@cyrilandsusannafoundation.org", password: "reviewer2024", name: "Application Reviewer", role: "reviewer" },
-  { email: "manager@cyrilandsusannafoundation.org", password: "manager2024", name: "Operations Manager", role: "document_manager" },
+  { 
+    email: "admin@cyrilandsusannafoundation.org", 
+    password: process.env.DEFAULT_ADMIN_PASSWORD || "fallback_temp_password", 
+    name: "Admin User", 
+    role: "super_admin" 
+  },
 ];
 
 // Initialize database with default admins
