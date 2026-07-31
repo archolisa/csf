@@ -80,7 +80,7 @@ export default function AdminLoginPage() {
                 type="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                placeholder="admin@cyrilandsusannafoundation.org"
+                placeholder="Enter your email"
                 className="w-full px-4 py-3 border-2 border-gray border-opacity-20 rounded-xl focus:outline-none focus:border-accent-color-primary transition bg-background placeholder-gray placeholder-opacity-50"
                 required
               />
