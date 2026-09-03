@@ -110,43 +110,45 @@ const Home = () => {
         <div className="absolute top-[600px] left-[-150px] w-80 h-80 bg-light-red rounded-full blur-[80px] opacity-30 -z-10"></div>
 
         {/* ... Rest of your page content remains unchanged ... */}
-        <section className="w-full flex flex-col items-center lg:flex-row lg:items-start justify-between lg:h-auto px-8 py-12 lg:px-24 lg:py-16 gap-12">
-          <div className="w-full flex flex-col items-center mt-4 lg:w-1/2 lg:mt-0 lg:h-full">
-            <h2 className="text-lg 2xl:text-2xl text-center text-accent-color-primary">
+        <section className="w-full flex flex-col items-center lg:flex-row lg:items-center justify-between lg:h-auto px-8 py-12 lg:px-24 lg:py-16 gap-12">
+          <div className="w-full flex flex-col items-center lg:items-start mt-4 lg:w-1/2 lg:mt-0 lg:h-full text-center lg:text-left">
+            <h2 className="text-xl 2xl:text-3xl font-bold text-accent-color-primary">
               ABOUT US
             </h2>
-            <p className="font-raleway text-sm 2xl:text-xl mt-2 flex-1">
+            <p className="font-raleway text-sm 2xl:text-xl mt-4 flex-1 leading-relaxed text-gray-800">
             The Cyril and Susanna Foundation is a non-profit organization committed to fostering human capital development in Nigeria, with a special focus on the Isuofia community in Aguata Local Government Area of Anambra State. <br/> Founded by <strong>Dr. Ike Nwankwor, MD, FRCPC</strong>, an accomplished son of Isuofia in Aguata LGA. Anambra State. This Foundation seeks to create opportunities for education and personal growth among the youth, particularly those from underprivileged backgrounds.
 Since its inception, the Foundation has launched several scholarship schemes aimed at supporting students across different educational levels—from primary school to university. <br/> Our initiatives include university scholarships for brilliant but disadvantaged Isuofia indigenes, educational support for members of the founder’s extended family, and merit-based scholarships for top-performing primary school pupils progressing to secondary school.
 <br/>We currently support over a dozen students and aim to expand our reach annually. The Foundation also envisions future postgraduate sponsorships and is actively working towards establishing a trust fund to ensure the sustainability of its programs.
 Driven by a passion to uplift the next generation, the Cyril and Susanna Foundation believes in empowering young minds through education—nurturing talent, inspiring excellence, and transforming lives.
             </p>
           </div>
-          <Image
-            className="rounded-md"
-            alt="C&S Foundation Picture"
-            src={`/assets/cs_pictures/1.jpeg`}
-            width={450}
-            height={450}
-          />
+          <div className="w-full lg:w-1/2 flex justify-center lg:justify-end">
+            <Image
+              className="rounded-2xl shadow-xl object-cover w-full h-auto max-w-lg lg:max-w-full"
+              alt="C&S Foundation Picture"
+              src={`/assets/cs_pictures/1.jpeg`}
+              width={650}
+              height={650}
+            />
+          </div>
         </section>
         
         {/* Carousel Section */}
-        <section className="w-full flex flex-col items-center lg:flex-row lg:items-start justify-between lg:h-auto px-8 py-12 lg:px-24 lg:py-16 gap-12">
-        <div className="w-full flex flex-col items-center mt-4 lg:w-1/2 lg:mt-0 lg:h-full">
+        <section className="w-full flex flex-col items-center lg:flex-row lg:items-center justify-between lg:h-auto px-8 py-12 lg:px-24 lg:py-16 gap-12">
+          <div className="w-full flex flex-col items-center mt-4 lg:w-1/2 lg:mt-0 lg:h-full">
             <CarouselPlugin />
           </div>
-          <div className="w-full flex flex-col items-center mt-4 lg:w-1/2 lg:mt-0 lg:h-full">
-            <h2 className="text-lg 2xl:text-2xl text-center text-accent-color-primary">
+          <div className="w-full flex flex-col items-center lg:items-start mt-4 lg:w-1/2 lg:mt-0 lg:h-full text-center lg:text-left">
+            <h2 className="text-xl 2xl:text-3xl font-bold text-accent-color-primary">
               GALLERY
             </h2>
-            <p className="font-raleway text-sm 2xl:text-2xl mt-2 flex-1">
+            <p className="font-raleway text-sm 2xl:text-2xl mt-4 flex-1 leading-relaxed text-gray-800">
             Discover the faces behind our mission — from dedicated sponsors and visionary board members to the inspiring scholars whose lives have been touched by the Cyril & Susanna Foundation. Browse through moments captured at our scholarship awards, community outreach, and other impactful events that shape our story.
             </p>
             <Link href="/programmes">
-              <Button variant="default" className="mt-4 2xl:text-lg 2xl:py-4">
+              <Button variant="default" className="mt-6 2xl:text-lg 2xl:py-4 transition-transform hover:scale-105">
                 VIEW OUR PROGRAMMES
-                <svg width="36" height="20" viewBox="0 0 49 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg width="36" height="20" viewBox="0 0 49 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="ml-2">
                   <path d="M2 12H47M47 12L36.6154 2M47 12L36.6154 22" stroke="#FFF5F5" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
                 </svg>
               </Button>

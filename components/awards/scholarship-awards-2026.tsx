@@ -39,7 +39,7 @@ export const ScholarshipAwards2026 = () => {
     };
 
     return (
-        <section className="relative w-full py-16 lg:py-24 px-8 lg:px-24 bg-gradient-to-b from-red-50 to-white overflow-hidden">
+        <section className="relative w-full py-10 lg:py-16 px-8 lg:px-24 bg-gradient-to-b from-red-50 to-white overflow-hidden">
             {/* Decorative Blurred Circles */}
             <div className="absolute top-[-100px] right-[-100px] w-80 h-80 bg-light-red rounded-full blur-[80px] opacity-30 -z-10"></div>
             <div className="absolute bottom-[-100px] left-[-100px] w-80 h-80 bg-accent-color-primary rounded-full blur-[80px] opacity-20 -z-10"></div>
@@ -53,7 +53,7 @@ export const ScholarshipAwards2026 = () => {
                 className="max-w-6xl mx-auto"
             >
                 {/* Header Section */}
-                <motion.div variants={itemVariants} className="text-center mb-16">
+                <motion.div variants={itemVariants} className="text-center mb-10">
                     <h2 className="font-michroma text-3xl lg:text-4xl text-accent-color-primary mb-4">
                         2026 Scholarship Award Recipients
                     </h2>
@@ -65,7 +65,7 @@ export const ScholarshipAwards2026 = () => {
                 {/* Award Stats Section */}
                 <motion.div
                     variants={itemVariants}
-                    className="flex justify-center mb-16"
+                    className="flex justify-center mb-10"
                 >
                     <div className="bg-accent-color-primary/10 rounded-lg p-6 text-center w-full max-w-sm">
                         <p className="font-michroma text-3xl lg:text-4xl text-accent-color-primary font-bold">
@@ -229,7 +229,7 @@ export const ScholarshipAwards2026 = () => {
                 {/* Call to Action Section */}
                 <motion.div
                     variants={itemVariants}
-                    className="mt-16 bg-gradient-to-r from-accent-color-primary/5 to-accent-color-primary/10 rounded-lg p-8 text-center"
+                    className="mt-10 bg-gradient-to-r from-accent-color-primary/5 to-accent-color-primary/10 rounded-lg p-8 text-center"
                 >
                     <p className="font-raleway text-gray-700 text-lg">
                         Are you an Isuofia indigene interested in applying for next year&apos;s scholarship? 
