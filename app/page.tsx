@@ -94,7 +94,7 @@ const Home = () => {
                   <span className="relative inline-flex rounded-full h-3 w-3 bg-white"></span>
                 </span>
                 <span className="font-raleway font-bold text-sm md:text-base tracking-wide uppercase">
-                  2026/2027 Scholarship Now Open
+                  2026/2027 Scholarship is Now Open!
                 </span>
               </Link>
             </div>
