@@ -67,6 +67,12 @@ export interface ScholarshipApplication {
     admission_letter_url?: string;
     passport_photo_url?: string;
     batch?: string;
+    // 2026/2027 cycle fields
+    gender?: string;
+    sponsor_address?: string;
+    residential_address?: string;
+    course_of_study?: string;
+    waec_grades?: Record<string, string>;
 }
 
 export interface Document {

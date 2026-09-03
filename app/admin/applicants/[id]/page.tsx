@@ -299,7 +299,9 @@ export default function ApplicantDetailPage() {
     .join("")
     .toUpperCase();
 
-  const passportUrl = getGoogleDriveThumbnail(applicant.passport_photo_url);
+  const passportUrl = applicant.passport_photo_url?.startsWith("/") 
+    ? applicant.passport_photo_url 
+    : getGoogleDriveThumbnail(applicant.passport_photo_url);
 
   return (
     <div className="p-6 max-w-5xl mx-auto">

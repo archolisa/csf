@@ -36,14 +36,14 @@ export default function ApplicantsPage() {
   const [applicants, setApplicants] = useState<ApplicantWithStatus[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [statusFilter, setStatusFilter] = useState<string>("all");
-  const [batchFilter, setBatchFilter] = useState<string>("all");
+  const [batchFilter, setBatchFilter] = useState<string>("2026/2027");
   const [searchQuery, setSearchQuery] = useState("");
   const [viewType, setViewType] = useState<"table" | "cards">("cards");
 
   // Sync Modal State
   const [isSyncModalOpen, setIsSyncModalOpen] = useState(false);
   const [syncSheetUrl, setSyncSheetUrl] = useState("https://docs.google.com/spreadsheets/d/10SnAQu42_hZdA94coIIxU894u94eA8B9YFHjCznVAPk/edit?resourcekey=&gid=1435963208#gid=1435963208");
-  const [syncBatch, setSyncBatch] = useState("2025");
+  const [syncBatch, setSyncBatch] = useState("2026/2027");
   const [isSyncing, setIsSyncing] = useState(false);
   const [syncResult, setSyncResult] = useState<{ total_processed: number; created: number; updated: number } | null>(null);
   const [syncError, setSyncError] = useState("");
@@ -293,8 +293,8 @@ export default function ApplicantsPage() {
                     className="w-full px-4 py-2.5 border border-slate-300 rounded-2xl focus:outline-none focus:ring-2 focus:ring-red-500 bg-white text-slate-700 text-sm"
                   >
                     <option value="all">All Batches</option>
-                    <option value="2025">2025 Scholarship</option>
-                    <option value="2026">2026 / Next Batch</option>
+                    <option value="2026/2027">2026/2027 Session</option>
+                    <option value="2025">2025 Session</option>
                   </select>
                 </div>
               </div>
@@ -426,8 +426,8 @@ export default function ApplicantsPage() {
                     disabled={isSyncing}
                     className="w-full px-4 py-3 border border-slate-300 rounded-2xl focus:outline-none focus:ring-2 focus:ring-red-500 text-sm bg-white text-slate-700"
                   >
+                    <option value="2026/2027">2026/2027 Session</option>
                     <option value="2025">2025 Batch</option>
-                    <option value="2026">2026 Batch (Next)</option>
                     <option value="2027">2027 Batch</option>
                   </select>
                 </div>

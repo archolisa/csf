@@ -1,8 +1,9 @@
 import { Header } from "@/components/ui/page-header";
 import Image from "next/image";
+import Link from "next/link";
 
 const Page = () => {
-    const teamHeaderText = `Apply for Cyril & Susanna Foundation 2025/2026 Scholarship.`;
+    const teamHeaderText = `Apply for Cyril & Susanna Foundation 2026/2027 Scholarship.`;
     const logoImagePath = "/assets/logo_csf.png"; 
     
     return(
@@ -28,11 +29,14 @@ const Page = () => {
                     <div className="z-[9] flex flex-col gap-8 font-raleway bg-fontcolor text-background rounded-lg p-8 w-full md:w-1/2">
                         <h2 className="text-2xl text-center">Undergraduate Application</h2>
                         <p className="text-sm font-lighter text-center">
-                        The 2025 Undergraduate Scholarship Application is Now Closed
+                        The 2026/2027 Undergraduate Scholarship Application is Now Open
                         </p>
-                        <button hidden className="font-raleway cursor-not-allowed bg-gray-400 text-background py-4 px-8 w-full md:w-1/2 mx-auto opacity-60">
+                        <Link 
+                            href="/scholarships/apply"
+                            className="font-raleway bg-accent-color-primary hover:bg-accent-color-secondary text-background py-4 px-8 w-full md:w-1/2 mx-auto text-center transition font-semibold rounded-md"
+                        >
                             Apply Now
-                        </button>
+                        </Link>
                     </div>
                 </section>
             

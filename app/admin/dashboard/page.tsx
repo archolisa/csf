@@ -13,8 +13,15 @@ import {
   Download,
   Trash2,
   Activity,
+  CalendarDays,
 } from "lucide-react";
 import Link from "next/link";
+
+const BATCH_OPTIONS = [
+  { value: "2026/2027", label: "2026/2027 Session" },
+  { value: "2025", label: "2025 Session" },
+  { value: "all", label: "All Sessions" },
+];
 
 interface DashboardStats {
   total_applicants: number;
@@ -52,6 +59,7 @@ export default function AdminDashboard() {
   const [isLoading, setIsLoading] = useState(true);
   const [docError, setDocError] = useState("");
   const [docMessage, setDocMessage] = useState("");
+  const [selectedBatch, setSelectedBatch] = useState("2026/2027");
 
   const [deleteConfirmOpen, setDeleteConfirmOpen] = useState(false);
   const [documentToDelete, setDocumentToDelete] = useState<string | null>(null);
@@ -78,9 +86,9 @@ export default function AdminDashboard() {
         });
 
         await Promise.all([
-          fetchStats(),
+          fetchStats("2026/2027"),
           fetchRecentActivity(),
-          fetchApplications(),
+          fetchApplications("2026/2027"),
           fetchDocuments(),
         ]);
       } catch (err) {
@@ -94,9 +102,10 @@ export default function AdminDashboard() {
     checkSession();
   }, [router]);
 
-  const fetchStats = async () => {
+  const fetchStats = async (batch?: string) => {
     try {
-      const response = await fetch("/api/admin/dashboard/stats");
+      const batchParam = batch || selectedBatch;
+      const response = await fetch(`/api/admin/dashboard/stats?batch=${batchParam}`);
       if (response.ok) {
         const data = await response.json();
         setStats(data);
@@ -118,9 +127,10 @@ export default function AdminDashboard() {
     }
   };
 
-  const fetchApplications = async () => {
+  const fetchApplications = async (batch?: string) => {
     try {
-      const response = await fetch("/api/admin/applications");
+      const batchParam = batch || selectedBatch;
+      const response = await fetch(`/api/admin/applications?batch=${batchParam}`);
       if (response.ok) {
         const data = await response.json();
         setApplications(data.applications || []);
@@ -129,6 +139,15 @@ export default function AdminDashboard() {
       console.error("Failed to fetch applications:", error);
       setApplications([]);
     }
+  };
+
+  // Re-fetch when batch changes
+  const handleBatchChange = async (newBatch: string) => {
+    setSelectedBatch(newBatch);
+    await Promise.all([
+      fetchStats(newBatch),
+      fetchApplications(newBatch),
+    ]);
   };
 
   const fetchDocuments = async () => {
@@ -204,6 +223,19 @@ export default function AdminDashboard() {
               </div>
 
               <div className="flex flex-wrap gap-3">
+                {/* Cycle Selector */}
+                <div className="inline-flex items-center gap-2 rounded-full bg-white px-4 py-3 text-sm font-semibold text-slate-900 border border-slate-200 shadow-sm">
+                  <CalendarDays size={16} className="text-red-600" />
+                  <select
+                    value={selectedBatch}
+                    onChange={(e) => handleBatchChange(e.target.value)}
+                    className="bg-transparent border-none focus:outline-none text-sm font-semibold text-slate-900 cursor-pointer"
+                  >
+                    {BATCH_OPTIONS.map((opt) => (
+                      <option key={opt.value} value={opt.value}>{opt.label}</option>
+                    ))}
+                  </select>
+                </div>
                 <Link
                   href="/admin/applicants"
                   className="inline-flex items-center gap-2 rounded-full bg-white px-4 py-3 text-sm font-semibold text-slate-900 border border-slate-200 shadow-sm hover:bg-slate-50 transition"

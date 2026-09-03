@@ -80,7 +80,7 @@ const scholarshipApplicationSchema = new mongoose.Schema({
       createdAt: { type: Date, default: Date.now }
     }
   ],
-  // Extended fields from Google Sheet
+  // Extended fields from Google Sheet (legacy 2025)
   date_of_birth: String,
   age: Number,
   village: String,
@@ -89,6 +89,7 @@ const scholarshipApplicationSchema = new mongoose.Schema({
   home_address: String,
   sponsor_name: String,
   sponsor_phone: String,
+  sponsor_address: String,
   institution: String,
   level: String,
   personal_statement: String,
@@ -96,7 +97,11 @@ const scholarshipApplicationSchema = new mongoose.Schema({
   waec_result_url: String,
   admission_letter_url: String,
   passport_photo_url: String,
-  batch: { type: String, default: "2025" }
+  // New fields for 2026/2027 cycle
+  gender: String,
+  course_of_study: String,
+  waec_grades: { type: mongoose.Schema.Types.Mixed, default: null },
+  batch: { type: String, default: "2026/2027" }
 });
 
 // Documents Schema

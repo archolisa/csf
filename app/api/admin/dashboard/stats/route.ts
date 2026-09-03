@@ -1,22 +1,32 @@
-import { NextResponse } from "next/server";
+import { NextRequest, NextResponse } from "next/server";
 import { ScholarshipApplication, Document, connectDB } from "@/lib/db";
 
-export async function GET() {
+export async function GET(req: NextRequest) {
   try {
     await connectDB();
 
-    // Get stats from database
-    const totalApplicants = await ScholarshipApplication.countDocuments();
-    const pendingApplications = await ScholarshipApplication.countDocuments({ status: "pending" });
-    const underReview = await ScholarshipApplication.countDocuments({ status: "under_review" });
-    const awarded = await ScholarshipApplication.countDocuments({ status: "awarded" });
-    const rejected = await ScholarshipApplication.countDocuments({ status: "rejected" });
+    const { searchParams } = new URL(req.url);
+    const batch = searchParams.get("batch");
+
+    // Build query filter — scope by batch when provided
+    const query: Record<string, unknown> = {};
+    if (batch && batch !== "all") {
+      query.batch = batch;
+    }
+
+    // Get stats from database, filtered by batch
+    const totalApplicants = await ScholarshipApplication.countDocuments(query);
+    const pendingApplications = await ScholarshipApplication.countDocuments({ ...query, status: "pending" });
+    const underReview = await ScholarshipApplication.countDocuments({ ...query, status: "under_review" });
+    const awarded = await ScholarshipApplication.countDocuments({ ...query, status: "awarded" });
+    const rejected = await ScholarshipApplication.countDocuments({ ...query, status: "rejected" });
     const totalDocuments = await Document.countDocuments({ uploaded_by_student: { $ne: true } });
 
-    // Count applications from this month
+    // Count applications from this month (also filtered by batch)
     const now = new Date();
     const monthStart = new Date(now.getFullYear(), now.getMonth(), 1);
     const thisMonthApplications = await ScholarshipApplication.countDocuments({
+      ...query,
       submitted_at: { $gte: monthStart }
     });
 

@@ -113,12 +113,12 @@ export default function AdminSidebar({ adminName, userRole }: AdminSidebarProps)
 
       {/* Sidebar */}
       <aside
-        className={`fixed md:static top-0 left-0 h-screen w-64 bg-gradient-to-b from-slate-900 to-slate-800 text-white flex flex-col shadow-2xl transition-transform duration-300 z-[60] ${
+        className={`fixed md:static top-0 left-0 h-[calc(100dvh-8rem)] md:h-screen w-64 bg-gradient-to-b from-slate-900 to-slate-800 text-white flex flex-col shadow-2xl transition-transform duration-300 z-[60] ${
           isOpen ? "translate-x-0" : "-translate-x-full md:translate-x-0"
         }`}
       >
         {/* Logo Section */}
-        <div className="p-6 border-b border-slate-700 relative">
+        <div className="p-5 border-b border-slate-700 relative">
           <Link href="/admin/dashboard" className="flex items-center space-x-3 pr-6 hover:opacity-80 transition-opacity">
             <div className="w-10 h-10 bg-white rounded-lg flex items-center justify-center p-0.5 overflow-hidden shrink-0">
               <Image 
@@ -157,7 +157,7 @@ export default function AdminSidebar({ adminName, userRole }: AdminSidebarProps)
                   <>
                     <button
                       onClick={() => toggleSubmenu(item.label)}
-                      className={`w-full flex items-center justify-between px-4 py-3 rounded-lg transition-colors ${
+                      className={`w-full flex items-center justify-between px-4 py-2 rounded-lg transition-colors ${
                         expandedMenu === item.label || active
                           ? "bg-red-500 text-white"
                           : "text-slate-300 hover:bg-slate-700"
@@ -181,7 +181,7 @@ export default function AdminSidebar({ adminName, userRole }: AdminSidebarProps)
                             key={subitem.href}
                             href={subitem.href}
                             onClick={() => setIsOpen(false)}
-                            className={`block px-4 py-2 rounded-lg text-sm transition-colors ${
+                            className={`block px-4 py-1.5 rounded-lg text-sm transition-colors ${
                               isActive(subitem.href, true)
                                 ? "bg-red-600 text-white"
                                 : "text-slate-400 hover:text-slate-200 hover:bg-slate-700"
@@ -197,7 +197,7 @@ export default function AdminSidebar({ adminName, userRole }: AdminSidebarProps)
                   <Link
                     href={item.href}
                     onClick={() => setIsOpen(false)}
-                    className={`flex items-center space-x-3 px-4 py-3 rounded-lg transition-colors ${
+                    className={`flex items-center space-x-3 px-4 py-2 rounded-lg transition-colors ${
                       active
                         ? "bg-red-500 text-white"
                         : "text-slate-300 hover:bg-slate-700"

@@ -70,7 +70,9 @@ export default function ApplicantsCards({
           .join("")
           .toUpperCase();
 
-        const passportUrl = getGoogleDriveThumbnail(applicant.passport_photo_url);
+        const passportUrl = applicant.passport_photo_url?.startsWith("/") 
+          ? applicant.passport_photo_url 
+          : getGoogleDriveThumbnail(applicant.passport_photo_url);
 
         // Check which key documents are available
         const hasJamb = !!applicant.jamb_result_url;
@@ -148,6 +150,13 @@ export default function ApplicantsCards({
                   <div className="flex items-center space-x-2">
                     <MapPin size={16} className="text-slate-400" />
                     <span className="truncate" title={applicant.village}>Village: {applicant.village}</span>
+                  </div>
+                )}
+
+                {applicant.jamb_score && (
+                  <div className="flex items-center space-x-2">
+                    <div className="w-4 h-4 flex items-center justify-center font-bold text-[10px] text-slate-400 border border-slate-400 rounded-full">J</div>
+                    <span>JAMB: {applicant.jamb_score}</span>
                   </div>
                 )}
 
