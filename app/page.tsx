@@ -76,6 +76,28 @@ const Home = () => {
                 Lighting the Path to a Brighter Future...
               </span>
             </h2>
+            
+            <div
+              className="mt-8 lg:mt-10 lg:text-left flex justify-center lg:justify-start"
+              style={{
+                animation: `fadeInUp 1s ease-out forwards`,
+                animationDelay: '1.3s',
+                opacity: 0,
+              }}
+            >
+              <Link 
+                href="/scholarships/apply" 
+                className="inline-flex items-center gap-4 bg-red-600/90 hover:bg-red-700 text-white rounded-full px-6 py-3.5 transition-all backdrop-blur-sm shadow-[0_0_20px_rgba(220,38,38,0.4)] hover:shadow-[0_0_25px_rgba(220,38,38,0.6)] border border-red-500/50 hover:scale-105"
+              >
+                <span className="relative flex h-3 w-3 shrink-0">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-3 w-3 bg-white"></span>
+                </span>
+                <span className="font-raleway font-bold text-sm md:text-base tracking-wide uppercase">
+                  2026/2027 Scholarship Now Open
+                </span>
+              </Link>
+            </div>
           </div>
         </div>
       </header>
@@ -88,7 +110,7 @@ const Home = () => {
         <div className="absolute top-[600px] left-[-150px] w-80 h-80 bg-light-red rounded-full blur-[80px] opacity-30 -z-10"></div>
 
         {/* ... Rest of your page content remains unchanged ... */}
-        <section className="flex flex-col items-center lg:flex-row lg:items-start justify-between lg:h-auto p-8 lg:p-24 gap-12">
+        <section className="w-full flex flex-col items-center lg:flex-row lg:items-start justify-between lg:h-auto px-8 py-12 lg:px-24 lg:py-16 gap-12">
           <div className="w-full flex flex-col items-center mt-4 lg:w-1/2 lg:mt-0 lg:h-full">
             <h2 className="text-lg 2xl:text-2xl text-center text-accent-color-primary">
               ABOUT US
@@ -110,7 +132,7 @@ Driven by a passion to uplift the next generation, the Cyril and Susanna Foundat
         </section>
         
         {/* Carousel Section */}
-        <section className="flex flex-col items-center lg:flex-row lg:items-start justify-between lg:h-auto p-8 lg:p-24 gap-12">
+        <section className="w-full flex flex-col items-center lg:flex-row lg:items-start justify-between lg:h-auto px-8 py-12 lg:px-24 lg:py-16 gap-12">
         <div className="w-full flex flex-col items-center mt-4 lg:w-1/2 lg:mt-0 lg:h-full">
             <CarouselPlugin />
           </div>
@@ -135,9 +157,9 @@ Driven by a passion to uplift the next generation, the Cyril and Susanna Foundat
         <ScholarshipAwards2026 />
 
         {/* Gallery Section */}
-        <section className="mt-8 w-full relative flex flex-col items-center lg:flex-row lg:items-start justify-between lg:h-auto p-8 lg:p-24 gap-4">
+        <section className="mt-8 w-full relative flex flex-col items-center lg:flex-row lg:items-start justify-between lg:h-auto px-8 py-12 lg:px-24 lg:py-16 gap-4 overflow-hidden">
           <Image
-            className="absolute top-[10px] left-1/2 tranform -translate-x-1/2 max-w-full"
+            className="absolute top-[10px] left-1/2 transform -translate-x-1/2 max-w-full"
             src={`/assets/cs_pictures/little_stars.png`}
             height={195}
             width={1000}

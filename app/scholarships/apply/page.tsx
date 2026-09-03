@@ -811,6 +811,15 @@ export default function ApplyPage() {
           <ArrowLeft className="w-4 h-4" /> Back to Scholarships
         </button>
 
+        <div className="mb-8 text-center sm:text-left">
+          <h1 className="text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight">
+            2026/2027 Scholarship Application
+          </h1>
+          <p className="text-slate-500 mt-2">
+            Please provide your details below to apply for the Cyril & Susanna Foundation Scholarship.
+          </p>
+        </div>
+
         {/* ─── Progress Bar ─────────────────────────────────────── */}
         <div className="mb-8">
           <div className="flex items-center justify-between mb-3">
