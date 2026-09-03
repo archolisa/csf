@@ -1,19 +1,10 @@
 import { NextRequest, NextResponse } from "next/server";
 import { ScholarshipApplication, Document, connectDB } from "@/lib/db";
-import { writeFile, mkdir } from "fs/promises";
-import { join } from "path";
-import { existsSync } from "fs";
+import { put } from "@vercel/blob";
 
-const UPLOAD_DIR = join(process.cwd(), "public", "uploads", "documents");
 const ALLOWED_TYPES = ["application/pdf", "application/msword", "application/vnd.openxmlformats-officedocument.wordprocessingml.document", "image/jpeg", "image/png", "image/gif"];
 
 const CURRENT_BATCH = "2026/2027";
-
-async function ensureUploadDir() {
-  if (!existsSync(UPLOAD_DIR)) {
-    await mkdir(UPLOAD_DIR, { recursive: true });
-  }
-}
 
 export async function POST(req: NextRequest) {
   try {
@@ -98,9 +89,6 @@ export async function POST(req: NextRequest) {
       batch: CURRENT_BATCH,
     });
 
-    // --- Handle file uploads ---
-    await ensureUploadDir();
-
     const saveFile = async (fileKey: string, resultName: string, urlField: string) => {
       const file = formData.get(fileKey) as File | null;
       if (!file || file.size === 0) return;
@@ -115,14 +103,17 @@ export async function POST(req: NextRequest) {
 
       const timestamp = Date.now();
       const originalName = file.name.replace(/[^a-zA-Z0-9.-]/g, "_");
-      const fileName = `${timestamp}-${fileKey}-${originalName}`;
-      const filePath = join(UPLOAD_DIR, fileName);
+      const fileName = `applications/${CURRENT_BATCH.replace("/", "-")}/${timestamp}-${fileKey}-${originalName}`;
 
       const bytes = await file.arrayBuffer();
       const buffer = Buffer.from(bytes);
-      await writeFile(filePath, buffer);
+      
+      const blob = await put(fileName, buffer, {
+        access: 'public',
+        addRandomSuffix: true
+      });
 
-      const publicPath = `/uploads/documents/${fileName}`;
+      const publicPath = blob.url;
 
       // Create Document record
       await Document.create({
