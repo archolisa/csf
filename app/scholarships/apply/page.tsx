@@ -137,11 +137,13 @@ export default function ApplyPage() {
 
   const validateStep = (s: number): string | null => {
     if (s === 0) {
-      if (!formData.applicant_name.trim()) return "Full name is required.";
+      if (!formData.applicant_name.trim() || formData.applicant_name.trim().length < 3) return "Please enter a valid full name.";
       if (!formData.email.trim()) return "Email address is required.";
       if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) return "Please enter a valid email address.";
       if (!formData.phone.trim()) return "Phone number is required.";
+      if (!/^\+?[0-9\s\-()]{7,15}$/.test(formData.phone.trim())) return "Please enter a valid phone number.";
       if (!formData.date_of_birth) return "Date of birth is required.";
+      if (new Date(formData.date_of_birth) > new Date()) return "Date of birth cannot be in the future.";
       if (!formData.gender) return "Please select your gender.";
       if (!formData.is_indigene) return "Please indicate if you are an indigene.";
       if (formData.is_indigene === "Yes" && !formData.village) return "Please select your village.";
@@ -153,9 +155,13 @@ export default function ApplyPage() {
     if (s === 1) {
       if (!formData.institution.trim()) return "Institution is required.";
       if (!formData.level) return "Please select your level of study.";
+      if (!formData.course_of_study.trim()) return "Course of study is required.";
       if (!formData.jamb_score.trim()) return "JAMB score is required.";
       const jambNum = parseInt(formData.jamb_score, 10);
       if (isNaN(jambNum) || jambNum < 0 || jambNum > 400) return "JAMB score must be between 0 and 400.";
+      
+      const hasWaecGrades = Object.values(formData.waec_grades).some(grade => grade !== "—" && grade !== "");
+      if (!hasWaecGrades) return "O'Level (WAEC) result grades are required. Please select at least one grade.";
     }
     if (s === 2) {
       if (!files.jamb_result) return "JAMB result document is required.";
@@ -547,7 +553,9 @@ export default function ApplyPage() {
       </div>
 
       <div>
-        <label className={labelClass}>Course of Study</label>
+        <label className={labelClass}>
+          Course of Study <span className="text-red-500">*</span>
+        </label>
         <input
           type="text"
           name="course_of_study"
@@ -572,10 +580,9 @@ export default function ApplyPage() {
         />
       </div>
 
-      {/* Simplified WAEC Grade Grid */}
       <div className="mt-6">
         <label className={labelClass}>
-          Enter your O&apos;Level (WAEC) Result Grades
+          Enter your O&apos;Level (WAEC) Result Grades <span className="text-red-500">*</span>
         </label>
         <p className="text-xs text-slate-500 mb-3">
           (Select grades for each subject, select &ldquo;—&rdquo; if subject wasn&apos;t offered.)
