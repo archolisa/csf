@@ -323,7 +323,7 @@ export default function ApplyPage() {
             name="applicant_name"
             value={formData.applicant_name}
             onChange={handleChange}
-            placeholder="e.g. Nwankwo Akaolisa"
+            placeholder="Enter your full name"
             className={inputClass}
           />
         </div>
@@ -336,7 +336,7 @@ export default function ApplyPage() {
             name="email"
             value={formData.email}
             onChange={handleChange}
-            placeholder="e.g. student@email.com"
+            placeholder="Enter your email address"
             className={inputClass}
           />
         </div>
@@ -349,7 +349,7 @@ export default function ApplyPage() {
             name="phone"
             value={formData.phone}
             onChange={handleChange}
-            placeholder="e.g. +234 801 234 5678"
+            placeholder="Enter your phone number"
             className={inputClass}
           />
         </div>
@@ -376,8 +376,8 @@ export default function ApplyPage() {
             <label
               key={g}
               className={`flex items-center gap-2 px-4 py-3 rounded-xl border cursor-pointer transition ${formData.gender === g
-                  ? "border-red-500 bg-red-50 text-red-700 font-semibold"
-                  : "border-slate-300 bg-white text-slate-700 hover:border-slate-400"
+                ? "border-red-500 bg-red-50 text-red-700 font-semibold"
+                : "border-slate-300 bg-white text-slate-700 hover:border-slate-400"
                 }`}
             >
               <input
@@ -411,8 +411,8 @@ export default function ApplyPage() {
             <label
               key={opt}
               className={`flex items-center gap-2 px-4 py-3 rounded-xl border cursor-pointer transition ${formData.is_indigene === opt
-                  ? "border-red-500 bg-red-50 text-red-700 font-semibold"
-                  : "border-slate-300 bg-white text-slate-700 hover:border-slate-400"
+                ? "border-red-500 bg-red-50 text-red-700 font-semibold"
+                : "border-slate-300 bg-white text-slate-700 hover:border-slate-400"
                 }`}
             >
               <input
@@ -833,18 +833,18 @@ export default function ApplyPage() {
                     }
                   }}
                   className={`flex items-center gap-2 text-sm font-semibold transition ${isActive
-                      ? "text-red-600"
-                      : isCompleted
-                        ? "text-emerald-600 cursor-pointer hover:text-emerald-700"
-                        : "text-slate-400 cursor-default"
+                    ? "text-red-600"
+                    : isCompleted
+                      ? "text-emerald-600 cursor-pointer hover:text-emerald-700"
+                      : "text-slate-400 cursor-default"
                     }`}
                 >
                   <div
                     className={`w-8 h-8 rounded-full flex items-center justify-center text-xs font-bold transition ${isActive
-                        ? "bg-red-600 text-white"
-                        : isCompleted
-                          ? "bg-emerald-500 text-white"
-                          : "bg-slate-200 text-slate-500"
+                      ? "bg-red-600 text-white"
+                      : isCompleted
+                        ? "bg-emerald-500 text-white"
+                        : "bg-slate-200 text-slate-500"
                       }`}
                   >
                     {isCompleted ? <Check className="w-4 h-4" /> : <Icon className="w-4 h-4" />}
