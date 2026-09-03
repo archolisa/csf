@@ -159,7 +159,7 @@ export default function ApplyPage() {
       if (!formData.jamb_score.trim()) return "JAMB score is required.";
       const jambNum = parseInt(formData.jamb_score, 10);
       if (isNaN(jambNum) || jambNum < 0 || jambNum > 400) return "JAMB score must be between 0 and 400.";
-      
+
       const hasWaecGrades = Object.values(formData.waec_grades).some(grade => grade !== "—" && grade !== "");
       if (!hasWaecGrades) return "O'Level (WAEC) result grades are required. Please select at least one grade.";
     }
@@ -375,11 +375,10 @@ export default function ApplyPage() {
           {["Male", "Female"].map((g) => (
             <label
               key={g}
-              className={`flex items-center gap-2 px-4 py-3 rounded-xl border cursor-pointer transition ${
-                formData.gender === g
+              className={`flex items-center gap-2 px-4 py-3 rounded-xl border cursor-pointer transition ${formData.gender === g
                   ? "border-red-500 bg-red-50 text-red-700 font-semibold"
                   : "border-slate-300 bg-white text-slate-700 hover:border-slate-400"
-              }`}
+                }`}
             >
               <input
                 type="radio"
@@ -390,9 +389,8 @@ export default function ApplyPage() {
                 className="sr-only"
               />
               <div
-                className={`w-4 h-4 rounded-full border-2 flex items-center justify-center ${
-                  formData.gender === g ? "border-red-500" : "border-slate-400"
-                }`}
+                className={`w-4 h-4 rounded-full border-2 flex items-center justify-center ${formData.gender === g ? "border-red-500" : "border-slate-400"
+                  }`}
               >
                 {formData.gender === g && (
                   <div className="w-2 h-2 rounded-full bg-red-500" />
@@ -412,11 +410,10 @@ export default function ApplyPage() {
           {["Yes", "No"].map((opt) => (
             <label
               key={opt}
-              className={`flex items-center gap-2 px-4 py-3 rounded-xl border cursor-pointer transition ${
-                formData.is_indigene === opt
+              className={`flex items-center gap-2 px-4 py-3 rounded-xl border cursor-pointer transition ${formData.is_indigene === opt
                   ? "border-red-500 bg-red-50 text-red-700 font-semibold"
                   : "border-slate-300 bg-white text-slate-700 hover:border-slate-400"
-              }`}
+                }`}
             >
               <input
                 type="radio"
@@ -427,9 +424,8 @@ export default function ApplyPage() {
                 className="sr-only"
               />
               <div
-                className={`w-4 h-4 rounded-full border-2 flex items-center justify-center ${
-                  formData.is_indigene === opt ? "border-red-500" : "border-slate-400"
-                }`}
+                className={`w-4 h-4 rounded-full border-2 flex items-center justify-center ${formData.is_indigene === opt ? "border-red-500" : "border-slate-400"
+                  }`}
               >
                 {formData.is_indigene === opt && (
                   <div className="w-2 h-2 rounded-full bg-red-500" />
@@ -649,7 +645,7 @@ export default function ApplyPage() {
           Personal Statement <span className="text-red-500">*</span>
         </label>
         <p className="text-xs text-slate-500 mb-2">
-          (Why should you be awarded this scholarship?)<br/>
+          (Why should you be awarded this scholarship?)<br />
           ..in less than 200 words
         </p>
         <textarea
@@ -836,22 +832,20 @@ export default function ApplyPage() {
                       scrollToTop();
                     }
                   }}
-                  className={`flex items-center gap-2 text-sm font-semibold transition ${
-                    isActive
+                  className={`flex items-center gap-2 text-sm font-semibold transition ${isActive
                       ? "text-red-600"
                       : isCompleted
-                      ? "text-emerald-600 cursor-pointer hover:text-emerald-700"
-                      : "text-slate-400 cursor-default"
-                  }`}
+                        ? "text-emerald-600 cursor-pointer hover:text-emerald-700"
+                        : "text-slate-400 cursor-default"
+                    }`}
                 >
                   <div
-                    className={`w-8 h-8 rounded-full flex items-center justify-center text-xs font-bold transition ${
-                      isActive
+                    className={`w-8 h-8 rounded-full flex items-center justify-center text-xs font-bold transition ${isActive
                         ? "bg-red-600 text-white"
                         : isCompleted
-                        ? "bg-emerald-500 text-white"
-                        : "bg-slate-200 text-slate-500"
-                    }`}
+                          ? "bg-emerald-500 text-white"
+                          : "bg-slate-200 text-slate-500"
+                      }`}
                   >
                     {isCompleted ? <Check className="w-4 h-4" /> : <Icon className="w-4 h-4" />}
                   </div>
