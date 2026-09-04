@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { useRouter } from "next/navigation";
+import Link from "next/link";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ScholarshipApplication } from "@/lib/interfaces";
@@ -10,7 +10,6 @@ import { Footer } from "@/components/ui/footer";
 import { Upload, FileCheck, ArrowLeft, Search, Loader2 } from "lucide-react";
 
 export default function UploadResultsPage() {
-  const router = useRouter();
   
   // Verification states
   const [email, setEmail] = useState("");
@@ -118,12 +117,12 @@ export default function UploadResultsPage() {
       <div className="absolute top-[600px] right-[-150px] w-80 h-80 bg-red-600 rounded-full blur-[120px] opacity-10 -z-10"></div>
 
       <main className="flex-1 mt-28 px-4 py-8 max-w-2xl mx-auto w-full font-raleway">
-        <button
-          onClick={() => router.back()}
-          className="flex items-center gap-2 text-slate-600 hover:text-red-600 font-semibold mb-6 transition"
+        <Link
+          href="/scholarships"
+          className="inline-flex items-center gap-2 text-slate-600 hover:text-red-600 font-semibold mb-6 transition"
         >
           <ArrowLeft className="w-4 h-4" /> Back to Scholarships
-        </button>
+        </Link>
 
         <Card className="p-8 shadow-xl border border-slate-200 bg-white rounded-3xl">
           <div className="text-center mb-8">

@@ -2,6 +2,7 @@
 
 import React, { useState, useRef } from "react";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { NavigationBar } from "@/components/ui/navigation-bar";
@@ -800,12 +801,12 @@ export default function ApplyPage() {
       <div className="fixed bottom-[-100px] right-[-150px] w-80 h-80 bg-red-600 rounded-full blur-[120px] opacity-[0.07] -z-10" />
 
       <main ref={formRef} className="flex-1 mt-28 px-4 py-8 max-w-3xl mx-auto w-full font-raleway">
-        <button
-          onClick={() => router.back()}
-          className="flex items-center gap-2 text-slate-600 hover:text-red-600 font-semibold mb-6 transition"
+        <Link
+          href="/scholarships"
+          className="inline-flex items-center gap-2 text-slate-600 hover:text-red-600 font-semibold mb-6 transition"
         >
           <ArrowLeft className="w-4 h-4" /> Back to Scholarships
-        </button>
+        </Link>
 
         <div className="mb-8 text-center sm:text-left">
           <h1 className="text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight">
